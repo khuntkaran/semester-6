@@ -5,13 +5,17 @@ public class Patten {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Number of Line : ");
         int n = sc.nextInt();
-
-        for(int i=0;i<n;i++){
-            for(int j=(i*n)+1;j<(i*n)+1+n;j++){
+        int k=0;
+        for(int i=0;i<n & k<n;i++,k++){
+            for(int j=(2*i*n)+1;j<(2*i*n)+1+n;j++){
                 System.out.print(j+" ");
             }
             System.out.println();
-            for(int j=(i*n)+1+(2*n);j>(i*n)+1+n;j--){
+            k++;
+            if(k==n){
+                break;
+            }
+            for(int j=(2*i*n)+(2*n);j>(2*i*n)+n;j--){
                 System.out.print(j+" ");
             }
             System.out.println();
