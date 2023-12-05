@@ -6,9 +6,7 @@ public class Swap_Element_In_Array {
             temp=arr[i];
             arr[i]=arr[i+1];
             arr[i+1]=temp;
-        }
-        for(int i :arr){
-            System.out.println(i);
+            System.out.print(arr[i]+" "+arr[i+1]+" ");
         }
     }
 }
