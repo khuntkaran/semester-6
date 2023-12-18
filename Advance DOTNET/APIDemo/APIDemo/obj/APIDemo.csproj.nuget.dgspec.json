@@ -41,9 +41,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Quintsys.Practices.EnterpriseLibrary.Data": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
