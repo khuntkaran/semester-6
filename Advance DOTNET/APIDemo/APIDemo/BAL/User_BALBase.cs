@@ -70,5 +70,25 @@ namespace APIDemo.BAL
                 return false;
             }
         }
+
+        public bool API_User_UpdateByPK(int id,String Name, String Email, String Contact)
+        {
+            try
+            {
+                User_DALBase user_DALBase = new User_DALBase();
+                if (user_DALBase.API_User_UpdateByPK(id,Name, Email, Contact))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

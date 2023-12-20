@@ -48,3 +48,13 @@ begin
 	into Persion
 	values(@Name,@Email,@Contact)
 end
+
+create procedure API_Persion_UpdateByPK 3,'MR.karan','hello@hi','878047'
+@ID int,
+@Name nvarchar(50),
+@Email nvarchar(50),
+@Contact nvarchar(50)
+as
+begin
+update Persion set Name=@Name,Email=@Email,Contact=@Contact where PersionID=@ID
+end

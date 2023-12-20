@@ -104,5 +104,30 @@ namespace APIDemo.DAL
                 return false;
             }
         }
+
+        public bool API_User_UpdateByPK(int id,String Name, String Email, String Contact)
+        {
+            try
+            {
+                SqlDatabase sqlDatabase = new SqlDatabase(DAL_Helpers.ConnString);
+                DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("API_Persion_UpdateByPK");
+                sqlDatabase.AddInParameter(dbCommand, "@ID", SqlDbType.Int, id);
+                sqlDatabase.AddInParameter(dbCommand, "@Name", SqlDbType.NVarChar, Name);
+                sqlDatabase.AddInParameter(dbCommand, "@Contact", SqlDbType.NVarChar, Contact);
+                sqlDatabase.AddInParameter(dbCommand, "@Email", SqlDbType.NVarChar, Email);
+                if (Convert.ToBoolean(sqlDatabase.ExecuteNonQuery(dbCommand)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

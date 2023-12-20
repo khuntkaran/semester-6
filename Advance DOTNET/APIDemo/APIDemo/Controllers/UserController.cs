@@ -92,6 +92,26 @@ namespace APIDemo.Controllers
                 return Ok(response);
             }
         }
+
+        [HttpPut]
+        public IActionResult APIUserUpdateByPK(int id,String Name, String Email, String Contact)
+        {
+            User_BALBase user_BALBase = new User_BALBase();
+            bool result = user_BALBase.API_User_UpdateByPK(id,Name, Email, Contact);
+            Dictionary<String, dynamic> response = new Dictionary<string, dynamic>();
+            if (result)
+            {
+                response.Add("Status", true);
+                response.Add("Message", "Update Data Successful");
+                return Ok(response);
+            }
+            else
+            {
+                response.Add("Status", false);
+                response.Add("Message", "Error");
+                return Ok(response);
+            }
+        }
     }
 
 }
