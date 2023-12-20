@@ -37,3 +37,14 @@ begin
 	from Persion
 	where Persion.PersionID = @ID
 end
+
+alter Procedure API_Persion_Insert 'kkp','kp@kp','8780'
+@Name nvarchar(50),
+@Email nvarchar(50),
+@Contact nvarchar(50)
+as
+begin
+	insert
+	into Persion
+	values(@Name,@Email,@Contact)
+end

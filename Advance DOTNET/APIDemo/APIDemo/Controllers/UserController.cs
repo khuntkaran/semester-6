@@ -56,11 +56,41 @@ namespace APIDemo.Controllers
         public IActionResult APIUserDeleteByPK(int id)
         {
             User_BALBase user_BALBase = new User_BALBase();
-            String result = user_BALBase.API_User_DeleteByPK(id);
+            bool result = user_BALBase.API_User_DeleteByPK(id);
             Dictionary<String, dynamic> response = new Dictionary<string, dynamic>();
-            response.Add("Status",true);
-            response.Add("Result", result);
-            return Ok(response);
+            if (result)
+            {
+                response.Add("Status", true);
+                response.Add("Message", "Delete Data Successful");
+                return Ok(response);
+            }
+            else
+            {
+                response.Add("Status", false);
+                response.Add("Message", "Error");
+                return Ok(response);
+            }
+            
+        }
+
+        [HttpPost]
+        public IActionResult APIUserInsert(String Name,String Email, String Contact)
+        {
+            User_BALBase user_BALBase = new User_BALBase();
+            bool result = user_BALBase.API_User_Insert(Name,Email,Contact);
+            Dictionary<String, dynamic> response = new Dictionary<string, dynamic>();
+            if (result)
+            {
+                response.Add("Status", true);
+                response.Add("Message", "Insert Data Successful");
+                return Ok(response);
+            }
+            else
+            {
+                response.Add("Status", false);
+                response.Add("Message", "Error");
+                return Ok(response);
+            }
         }
     }
 

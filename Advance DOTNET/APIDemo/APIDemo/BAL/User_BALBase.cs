@@ -32,16 +32,42 @@ namespace APIDemo.BAL
             }
         }
 
-        public String API_User_DeleteByPK(int id)
+        public bool API_User_DeleteByPK(int id)
         {
             try
             {
                 User_DALBase user_DALBase = new User_DALBase();
-                return user_DALBase.API_User_DeleteByPK(id);
+                if (user_DALBase.API_User_DeleteByPK(id))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch(Exception ex)
             {
-                return null;
+                return false;
+            }
+        }
+        public bool API_User_Insert(String Name,  String Email, String Contact)
+        {
+            try
+            {
+                User_DALBase user_DALBase = new User_DALBase();
+                if (user_DALBase.API_User_Insert(Name, Email, Contact))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch(Exception ex)
+            {
+                return false;
             }
         }
     }
