@@ -24,12 +24,60 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cVmlld3NcVmFsaWRhdGlvblxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/Login/Views/Validation/Successful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cVmlld3NcVmFsaWRhdGlvblxTdWNjZXNzZnVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/Login/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/Login/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEFib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEJvb2tpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Driver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXERyaXZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXE1haW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXE9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXFNlcnZpY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Truck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXFRydWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Views/Home/Index.cshtml]

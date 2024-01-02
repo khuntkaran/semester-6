@@ -223,3 +223,13 @@ E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin
 E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\obj\Debug\net6.0\TruckTransportManegment.csproj.CopyComplete
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\Quintsys.Practices.EnterpriseLibrary.Data.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\Quintsys.System.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\System.Data.SqlClient.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\semester-6\Advance DOTNET\TruckTransportManegment\TruckTransportManegment\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

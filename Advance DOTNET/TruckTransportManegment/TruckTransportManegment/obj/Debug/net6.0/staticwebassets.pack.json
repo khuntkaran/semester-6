@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\TruckTransportManegment.bundle.scp.css"
     },
     {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\style.css.map",
       "PackagePath": "staticwebassets\\css\\style.css.map"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\stylef.css",
+      "PackagePath": "staticwebassets\\css\\stylef.css"
     },
     {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\fonts\\material-icon\\css\\material-design-iconic-font.css",
@@ -369,8 +377,108 @@
       "PackagePath": "staticwebassets\\images\\signup-image.jpg"
     },
     {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\images\\truck1.png",
+      "PackagePath": "staticwebassets\\images\\truck1.png"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\images\\truck2.png",
+      "PackagePath": "staticwebassets\\images\\truck2.png"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\images\\truck3.png",
+      "PackagePath": "staticwebassets\\images\\truck3.png"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\img\\about.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\feature.jpg",
+      "PackagePath": "staticwebassets\\img\\feature.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\map.png",
+      "PackagePath": "staticwebassets\\img\\map.png"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-1.jpg",
+      "PackagePath": "staticwebassets\\img\\service-1.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-2.jpg",
+      "PackagePath": "staticwebassets\\img\\service-2.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-3.jpg",
+      "PackagePath": "staticwebassets\\img\\service-3.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-4.jpg",
+      "PackagePath": "staticwebassets\\img\\service-4.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-5.jpg",
+      "PackagePath": "staticwebassets\\img\\service-5.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\service-6.jpg",
+      "PackagePath": "staticwebassets\\img\\service-6.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\img\\testimonial-4.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial-4.jpg"
+    },
+    {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap.scss"
     },
     {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -553,6 +661,342 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\lib\\counterup\\counterup.min.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -599,6 +1043,66 @@
     {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
     },
     {
       "Id": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\scss\\common\\extend.scss",

@@ -2,13 +2,21 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+
 }
+@model TruckTransportManegment.Areas.Login.Models.UserModel;
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
 
 <!-- Font Icon -->
 <link rel="stylesheet" href="~/fonts/material-icon/css/material-design-iconic-font.min.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/stylef.css">
 <div class="main">
 
    
@@ -23,15 +31,16 @@
                 </div>
 
                 <div class="signin-form">
-                    <h2 class="form-title">Sign up</h2>
-                    <form method="POST" class="register-form" id="login-form">
+                    <h2 class="form-title">Log <span class="theamcolor">in</span> </h2>
+                    <form method="post" class="register-form" id="login-form" asp-area="Login" asp-controller="Validation" asp-action="SubmitLogin">
                         <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
+                            <label for="your_name"><i class="zmdi theamcolor zmdi-account material-icons-name"></i></label>
+                            <input asp-for="UserName" type="text"  id="your_name" placeholder="Your Name" />
+                            <span asp-validation-for="UserName"></span>
                         </div>
                         <div class="form-group">
-                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                            <label for="your_pass"><i class="zmdi theamcolor zmdi-lock"></i></label>
+                            <input asp-for="Password" type="password" name="Password" id="your_pass" placeholder="Password" />
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -55,7 +64,3 @@
     </section>
 
 </div>
-
-<!-- JS -->
-<script src="~/vendor/jquery/jquery.min.js"></script>
-<script src="~/js/main.js"></script>
