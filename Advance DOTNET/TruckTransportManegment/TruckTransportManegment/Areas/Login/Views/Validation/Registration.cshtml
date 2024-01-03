@@ -9,7 +9,9 @@
     }
 }
 @model TruckTransportManegment.Areas.Login.Models.UserModel
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <!-- Font Icon -->
 <link rel="stylesheet" href="~/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -27,27 +29,31 @@
                     <form method="POST" asp-area="Login" asp-controller="Validation" asp-action="SubmitRegistration" class="register-form" id="register-form">
                         <div class="form-group">
                             <label for="name"><i class="zmdi theamcolor zmdi-account material-icons-name"></i></label>
-                            <input asp-for="UserName" type="text" name="UserName" id="name" placeholder="Your Name" />
-                            <span asp-validation-for="UserName"></span>
+                            <input asp-for="UserName" type="text" id="name" placeholder="Your Name" />
+                            <span class="text-danger" asp-validation-for="UserName"></span>
                         </div>
                         <div class="form-group">
                             <label for="number"><i class="zmdi theamcolor zmdi-phone material-icons-name"></i></label>
-                            <input asp-for="Phone" type="number" name="Phone" id="phone" placeholder="Your Phone No." />
+                            <input asp-for="Phone" type="number"  id="phone" placeholder="Your Phone No." />
+                            <span class="text-danger" asp-validation-for="Phone"></span>
                         </div>
                         <div class="form-group">
                             <label for="email"><i class="zmdi theamcolor zmdi-email"></i></label>
-                            <input asp-for="Email" type="email" name="Email" id="email" placeholder="Your Email" />
+                            <input asp-for="Email" type="email"  id="email" placeholder="Your Email" />
+                            <span class="text-danger" asp-validation-for="Email"></span>
                         </div>
                         <div class="form-group">
                             <label for="pass"><i class="zmdi theamcolor zmdi-lock"></i></label>
-                            <input asp-for="Password" type="password" name="Password" id="pass" placeholder="Password" />
+                            <input asp-for="Password" type="password"  id="pass" placeholder="Password" />
+                            <span class="text-danger" asp-validation-for="Password"></span>
                         </div>
                         <div class="form-group">
                             <label for="re-pass"><i class="zmdi theamcolor zmdi-lock-outline"></i></label>
-                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                            <input asp-for="REPassword" type="password"  id="re_pass" placeholder="Repeat your password" />
+                            <span class="text-danger" asp-validation-for="REPassword"></span>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <input type="checkbox"  id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="~/#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group form-button">
@@ -66,8 +72,3 @@
    
 </div>
 
-<!-- JS -->
-<script src="~/vendor/jquery/jquery.min.js"></script>
-<script src="~/lib/wow/wow.js"></script>
-<script src="~/lib/wow/wow.min.js"></script>
-<script src="~/js/main.js"></script>

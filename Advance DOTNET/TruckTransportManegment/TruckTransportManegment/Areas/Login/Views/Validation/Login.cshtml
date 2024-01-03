@@ -5,11 +5,15 @@
 
 }
 @model TruckTransportManegment.Areas.Login.Models.UserModel;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @section Scripts{
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
 
 
 <!-- Font Icon -->
@@ -18,9 +22,6 @@
 <!-- Main css -->
 <link rel="stylesheet" href="~/css/stylef.css">
 <div class="main">
-
-   
-
     <!-- Sing in  Form -->
     <section class="sign-in">
         <div class="container">
@@ -34,13 +35,14 @@
                     <h2 class="form-title">Log <span class="theamcolor">in</span> </h2>
                     <form method="post" class="register-form" id="login-form" asp-area="Login" asp-controller="Validation" asp-action="SubmitLogin">
                         <div class="form-group">
-                            <label for="your_name"><i class="zmdi theamcolor zmdi-account material-icons-name"></i></label>
-                            <input asp-for="UserName" type="text"  id="your_name" placeholder="Your Name" />
-                            <span asp-validation-for="UserName"></span>
+                            <label ><i class="zmdi theamcolor zmdi-account material-icons-name"></i></label>
+                            <input asp-for="UserName" type="text"  placeholder="Your Name" />
+                            <span class="text-danger" asp-validation-for="UserName"></span>
                         </div>
                         <div class="form-group">
                             <label for="your_pass"><i class="zmdi theamcolor zmdi-lock"></i></label>
-                            <input asp-for="Password" type="password" name="Password" id="your_pass" placeholder="Password" />
+                            <input asp-for="Password" type="password"  id="your_pass" placeholder="Password" />
+                            <span class="text-danger" asp-validation-for="Password"></span>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -50,6 +52,8 @@
                             <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                         </div>
                     </form>
+                    
+                    
                     <div class="social-login">
                         <span class="social-label">Or login with</span>
                         <ul class="socials">
@@ -64,3 +68,16 @@
     </section>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
