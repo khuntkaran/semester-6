@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TruckTransportManegment.DAL;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
 {
+    [CheckAccess]
     [Area("MainPages")]
     public class PagesController : Controller
     {
@@ -36,18 +38,22 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             ViewBagData();
             return View();
         }
+        [CheckAccess2]
         public IActionResult Booking()
         {
             ViewBag.Title = "Booking";
             ViewBagData();
             return View();
         }
+        [CheckAccess1]
         public IActionResult Truck()
         {
             ViewBag.Title = "Truck";
             ViewBagData();
-            return View();
+            Truck_DALBase truck_DALBase = new Truck_DALBase();
+            return View(truck_DALBase.Truck_SelectAll());
         }
+        [CheckAccess1]
         public IActionResult Driver()
         {
             ViewBag.Title = "Driver";

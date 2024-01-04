@@ -11,7 +11,6 @@ namespace TruckTransportManegment.DAL
         {
             try
             {
-                int id = 0;
                 SqlDatabase sqlDatabase = new SqlDatabase(DAL_Helpers.ConnString);
                 DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("API_MST_User_Select_By_Username_Password");
                 sqlDatabase.AddInParameter(dbCommand, "@UserName", SqlDbType.NVarChar, username);
@@ -20,9 +19,7 @@ namespace TruckTransportManegment.DAL
                 UserModel userModel= new UserModel();
                 using (IDataReader dr = sqlDatabase.ExecuteReader(dbCommand))
                 {
-                    dr.Read();
-                    
-                        id = Convert.ToInt32(dr["UserID"].ToString());
+                        dr.Read();   
                         userModel = new UserModel();
                         userModel.UserID = Convert.ToInt32(dr["UserID"].ToString());
                         userModel.UserName = dr["UserName"].ToString();

@@ -1,26 +1,28 @@
 --MST_User Table
-alter PROCEDURE API_MST_User_Insert
-    @UserName NVARCHAR(max),
-    @Password NVARCHAR(max),
-    @Email NVARCHAR(max),
-    @Phone NVARCHAR(max)
-AS
-BEGIN
-    INSERT INTO [MST_User] (UserName, Password, Email, Phone, IsAdmin, IsActive, Created, Modified)
-    VALUES (@UserName, @Password, @Email, @Phone, 0, 1, GETDATE(), GETDATE());
-END
+	--insert
+		alter PROCEDURE API_MST_User_Insert
+			@UserName NVARCHAR(max),
+			@Password NVARCHAR(max),
+			@Email NVARCHAR(max),
+			@Phone NVARCHAR(max)
+		AS
+		BEGIN
+			INSERT INTO [MST_User] (UserName, Password, Email, Phone, IsAdmin, IsActive, Created, Modified)
+			VALUES (@UserName, @Password, @Email, @Phone, 0, 1, GETDATE(), GETDATE());
+		END
 
-exec API_MST_User_Insert 'kkk','kkk','kkk@kkk.kkk','8780471198',1,1
-exec API_MST_User_Insert 'karan','karan','karan@karan.karan','9876543210',0,1
-select * from MST_User
+		exec API_MST_User_Insert 'kkk','kkk','kkk@kkk.kkk','8780471198',1,1
+		exec API_MST_User_Insert 'karan','karan','karan@karan.karan','9876543210',0,1
+		select * from MST_User
 
-CREATE PROCEDURE API_MST_User_Select_By_Username_Password
-   @UserName NVARCHAR(max),
-    @Password NVARCHAR(max)
-AS
-BEGIN
-    SELECT * FROM [MST_User] WHERE UserName = @UserName and Password=@Password
-END
+	-- select by username password
+		CREATE PROCEDURE API_MST_User_Select_By_Username_Password
+		   @UserName NVARCHAR(max),
+			@Password NVARCHAR(max)
+		AS
+		BEGIN
+			SELECT * FROM [MST_User] WHERE UserName = @UserName and Password=@Password
+		END
 
 
 CREATE PROCEDURE GetAllUsers
@@ -60,10 +62,75 @@ END
 
 
 --MST_Truck
+	--insert
+		CREATE PROCEDURE API_MST_Truck_Insert
+			@TruckName NVARCHAR(max),
+			@TruckType NVARCHAR(max),
+			@Capacity DECIMAL(7, 2),
+			@TruckNumber NVARCHAR(max),
+			@EngineNo NVARCHAR(max),
+			@ChasisNo NVARCHAR(max),
+			@Price DECIMAL(12, 2)
+		AS
+		BEGIN
+			INSERT INTO MST_Truck (TruckName, TruckType, Capacity, TruckNumber, EngineNo, ChasisNo, Price,Created,Modified)
+			VALUES (@TruckName, @TruckType, @Capacity, @TruckNumber, @EngineNo, @ChasisNo, @Price,GETDATE(),GETDATE())
+		END
+
+		exec API_MST_Truck_Insert 'I-sir','big',500.2,'GJ03RR7052','XJs4804IO','TESDFA7895',20
+
+	--select by id
+		CREATE PROCEDURE API_MST_Truck_Select_By_ID
+			@TruckID INT
+		AS
+		BEGIN
+			SELECT * FROM MST_Truck WHERE TruckID = @TruckID
+		END
+
+	--select all
+		CREATE PROCEDURE API_MST_Truck_SelectAll
+		AS
+		BEGIN
+			SELECT * FROM MST_Truck
+		END
+
+	-- Update
+		CREATE PROCEDURE API_MST_Truck_Update
+			@TruckID INT,
+			@TruckName NVARCHAR(max),
+			@TruckType NVARCHAR(max),
+			@Capacity DECIMAL(7, 2),
+			@TruckNumber NVARCHAR(max),
+			@EngineNo NVARCHAR(max),
+			@ChasisNo NVARCHAR(max),
+			@Price DECIMAL(12, 2)
+		AS
+		BEGIN
+			UPDATE MST_Truck
+			SET TruckName = @TruckName,
+				TruckType = @TruckType,
+				Capacity = @Capacity,
+				TruckNumber = @TruckNumber,
+				EngineNo = @EngineNo,
+				ChasisNo = @ChasisNo,
+				Price = @Price,
+				Modified =GETDATE()
+			WHERE TruckID = @TruckID
+		END
+
+	-- delete
+		CREATE PROCEDURE API_MST_Truck_Delete
+			@TruckID INT
+		AS
+		BEGIN
+			DELETE FROM MST_Truck WHERE TruckID = @TruckID
+		END
 
 
+
+select * from MST_Truck
 --MST_City
-
+	
 
 --MST_GoodsType
 
