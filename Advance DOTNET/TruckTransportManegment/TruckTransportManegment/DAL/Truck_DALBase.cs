@@ -15,19 +15,19 @@ namespace TruckTransportManegment.DAL
                 DbCommand dbCommand;
                 if (truckModel.TruckID != null)
                 {
-                    dbCommand = sqlDatabase.GetStoredProcCommand("API_MST_Truck_Insert");
+                    dbCommand = sqlDatabase.GetStoredProcCommand("API_MST_Truck_Update");
                     sqlDatabase.AddInParameter(dbCommand, "@TruckID", SqlDbType.NVarChar,truckModel.TruckID);
                 }
                 else
                 {
-                    dbCommand = sqlDatabase.GetStoredProcCommand("API_MST_Truck_Update");
+                    dbCommand = sqlDatabase.GetStoredProcCommand("API_MST_Truck_Insert");
                 }
                 sqlDatabase.AddInParameter(dbCommand, "@TruckName", SqlDbType.NVarChar, truckModel.TruckName);
                 sqlDatabase.AddInParameter(dbCommand, "@TruckNumber", SqlDbType.NVarChar, truckModel.TruckNumber);
                 sqlDatabase.AddInParameter(dbCommand, "@TruckType", SqlDbType.NVarChar, truckModel.TruckType);
                 sqlDatabase.AddInParameter(dbCommand, "@EngineNo", SqlDbType.NVarChar, truckModel.EngineNo);
                 sqlDatabase.AddInParameter(dbCommand, "@ChasisNo", SqlDbType.NVarChar, truckModel.ChasisNo);
-                sqlDatabase.AddInParameter(dbCommand, "@Capacity", SqlDbType.Decimal, truckModel.Price);
+                sqlDatabase.AddInParameter(dbCommand, "@Price", SqlDbType.Decimal, truckModel.Price);
                 sqlDatabase.AddInParameter(dbCommand, "@Capacity", SqlDbType.Decimal, truckModel.Capacity);
 
                 return Convert.ToBoolean(sqlDatabase.ExecuteNonQuery(dbCommand));
@@ -92,8 +92,8 @@ namespace TruckTransportManegment.DAL
                         truckModel.TruckNumber = dr["TruckNumber"].ToString();
                         truckModel.EngineNo = dr["EngineNo"].ToString();
                         truckModel.ChasisNo = dr["ChasisNo"].ToString();
-                        truckModel.Capacity = Convert.ToDouble(dr["IsAdmin"].ToString());
-                        truckModel.Price = Convert.ToDouble(dr["IsAdmin"].ToString());
+                        truckModel.Capacity = Convert.ToDouble(dr["Capacity"].ToString());
+                        truckModel.Price = Convert.ToDouble(dr["Price"].ToString());
                         truckModel.Created = Convert.ToDateTime(dr["Created"].ToString());
                         truckModel.Modified = Convert.ToDateTime(dr["Modified"].ToString());
                     }

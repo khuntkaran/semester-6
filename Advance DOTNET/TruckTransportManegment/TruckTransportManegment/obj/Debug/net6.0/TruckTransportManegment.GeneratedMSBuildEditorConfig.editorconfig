@@ -68,8 +68,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXFNlcnZpY2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Truck.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXFRydWNrLmNzaHRtbA==
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Truck/Truck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFRydWNrXFRydWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Truck/TruckAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFRydWNrXFRydWNrQWRkRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/_ValidationScriptsPartial.cshtml]
