@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@model List<TruckTransportManegment.Areas.MainPages.Models.CityModel>;
+<div class="container mt-5">
+    <a class="btn btn-outline-primary " asp-area="MainPages" asp-controller="City" asp-action="CityAddEdit">Add City</a>
+
+
+    <table class="table text-center table-striped">
+        <thead>
+            <tr class="">
+                <th scope="col">City ID</th>
+                <th scope="col">City Name</th>
+                <th scope="col">City Code</th>
+                <th scope="col">Created</th>
+                <th scope="col">Modified</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var City in Model)
+            {
+                <tr>
+                    <th scope="row">@City.CityID</th>
+                    <td>@City.CityName</td>
+                    <td>@City.CityCode</td>
+                    <td>@City.Created</td>
+                    <td>@City.Modified</td>
+                    <td>
+                        <form method="post" asp-area="MainPages" asp-controller="City" asp-action="CityAddEdit" asp-route-CityID="@Convert.ToInt32(City.CityID)">
+                            <button type="submit" class="btn btn-outline-warning">Edit</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-area="MainPages" asp-controller="City" asp-action="CityDelete" asp-route-CityID="@Convert.ToInt32(City.CityID)">
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TruckTransportManegment.Areas.MainPages.Models.CityModel;
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<h1>@ViewBag.Data</h1>
+<div class="container">
+    <form method="post" asp-area="MainPages" asp-controller="City" asp-action="Save">
+        <input type="hidden" asp-for="CityID" />
+        <table class="table" align="center">
+            <tr>
+                <td>CityName</td>
+                <td>:</td>
+                <td><input asp-for="CityName" type="text" placeholder="City Name" /><br /><span class="text-danger" asp-validation-for="CityName"></span></td>
+            </tr>
+            <tr>
+                <td>City Phone</td>
+                <td>:</td>
+                <td><input asp-for="CityCode" type="text" placeholder="City Code" /><br /><span class="text-danger" asp-validation-for="CityCode"></span></td>
+            </tr>
+            
+
+        </table>
+        <div class="d-flex justify-content-evenly">
+            <input class="btn btn-outline-success " type="submit" />
+            <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="City" asp-action="City">
+                Cancel
+            </a>
+        </div>
+
+    </form>
+</div>

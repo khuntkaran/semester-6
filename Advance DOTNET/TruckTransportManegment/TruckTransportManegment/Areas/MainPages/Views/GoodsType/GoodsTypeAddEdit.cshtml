@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TruckTransportManegment.Areas.MainPages.Models.GoodsTypeModel;
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<h1>@ViewBag.Data</h1>
+<div class="container">
+    <form method="post" asp-area="MainPages" asp-controller="GoodsType" asp-action="Save">
+        <input type="hidden" asp-for="GoodsTypeID" />
+        <table class="table" align="center">
+            <tr>
+                <td>GoodsTypeName</td>
+                <td>:</td>
+                <td><input asp-for="GoodsTypeName" type="text" placeholder="GoodsType Name" /><br /><span class="text-danger" asp-validation-for="GoodsTypeName"></span></td>
+            </tr>
+
+        </table>
+        <div class="d-flex justify-content-evenly">
+            <input class="btn btn-outline-success " type="submit" />
+            <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsType">
+                Cancel
+            </a>
+        </div>
+
+    </form>
+</div>

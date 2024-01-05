@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TruckTransportManegment.Areas.MainPages.Models.DriverModel;
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<h1>@ViewBag.Data</h1>
+<div class="container">
+    <form method="post" asp-area="MainPages" asp-controller="Driver" asp-action="Save">
+        <input type="hidden" asp-for="DriverID" />
+        <table class="table" align="center">
+            <tr>
+                <td>DriverName</td>
+                <td>:</td>
+                <td><input asp-for="DriverName" type="text" placeholder="Driver Name" /><br /><span class="text-danger" asp-validation-for="DriverName"></span></td>
+            </tr>
+            <tr>
+                <td>Driver Phone</td>
+                <td>:</td>
+                <td><input asp-for="DriverPhone" type="text" placeholder="Driver Phone" /><br /><span class="text-danger" asp-validation-for="DriverPhone"></span></td>
+            </tr>
+            <tr>
+                <td>Licence No</td>
+                <td>:</td>
+                <td><input asp-for="LicenceNo" type="text" placeholder="Licence No" /><br /><span class="text-danger" asp-validation-for="LicenceNo"></span></td>
+            </tr>
+            <tr>
+                <td>Licence Expiry Date</td>
+                <td>:</td>
+                <td><input asp-for="LicenceExpiryDate" type="date" placeholder="Licence Expiry Date" /><br /><span class="text-danger" asp-validation-for="LicenceExpiryDate"></span></td>
+            </tr>
+            
+        </table>
+        <div class="d-flex justify-content-evenly">
+            <input class="btn btn-outline-success " type="submit" />
+            <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="Driver" asp-action="Driver">
+                Cancel
+            </a>
+        </div>
+
+    </form>
+</div>

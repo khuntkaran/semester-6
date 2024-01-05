@@ -36,6 +36,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/City/City.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXENpdHlcQ2l0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/City/CityAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXENpdHlcQ2l0eUFkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Driver/Driver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXERyaXZlclxEcml2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Driver/DriverAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXERyaXZlclxEcml2ZXJBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/GoodsType/GoodsType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXEdvb2RzVHlwZVxHb29kc1R5cGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/GoodsType/GoodsTypeAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXEdvb2RzVHlwZVxHb29kc1R5cGVBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEFib3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,10 +70,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXENvbnRhY3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Driver.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXERyaXZlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Home.cshtml]

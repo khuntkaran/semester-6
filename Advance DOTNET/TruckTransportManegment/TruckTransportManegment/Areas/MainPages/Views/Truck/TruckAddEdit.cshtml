@@ -13,50 +13,52 @@
     }
 }
 <h1>@ViewBag.Data</h1>
-<form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="Save">
-    <input type="hidden" asp-for="TruckID" />
-    <table class="table" align="center">
-        <tr>
-            <td>TruckName</td>
-            <td>:</td>
-            <td><input asp-for="TruckName" type="text" placeholder="Truck Name" /><br /><span class="text-danger" asp-validation-for="TruckName"></span></td>
-        </tr>
-        <tr>
-            <td>TruckType</td>
-            <td>:</td>
-            <td><input asp-for="TruckType" type="text" placeholder="Truck Type" /><br /><span class="text-danger" asp-validation-for="TruckType"></span></td>
-        </tr>
-        <tr>
-            <td>TruckNumber</td>
-            <td>:</td>
-            <td><input asp-for="TruckNumber" type="text" placeholder="Truck Number" /><br /><span class="text-danger" asp-validation-for="TruckNumber"></span></td>
-        </tr>
-        <tr>
-            <td>EngineNo</td>
-            <td>:</td>
-            <td><input asp-for="EngineNo" type="text" placeholder="Engine No" /><br /><span class="text-danger" asp-validation-for="EngineNo"></span></td>
-        </tr>
-        <tr>
-            <td>ChasisNo</td>
-            <td>:</td>
-            <td><input asp-for="ChasisNo" type="text" placeholder="Chasis No" /><br /><span class="text-danger" asp-validation-for="ChasisNo"></span></td>
-        </tr>
-        <tr>
-            <td>Capacity</td>
-            <td>:</td>
-            <td><input asp-for="Capacity" type="number" placeholder="Capacity" /><br /><span class="text-danger" asp-validation-for="Capacity"></span></td>
-        </tr>
-        <tr>
-            <td>Price</td>
-            <td>:</td>
-            <td><input asp-for="Price" type="number" placeholder="Price" /><br /><span class="text-danger" asp-validation-for="Price"></span></td>
-        </tr>
-    </table>
-    <div class="d-flex justify-content-evenly">
-        <input class="btn btn-outline-success " type="submit" />
-        <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="Truck" asp-action="Truck">
-            Cancel
-        </a>
-    </div>
+<div class="container">
+    <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="Save">
+        <input type="hidden" asp-for="TruckID" />
+        <table class="table" align="center">
+            <tr>
+                <td>TruckName</td>
+                <td>:</td>
+                <td><input asp-for="TruckName" type="text" placeholder="Truck Name" /><br /><span class="text-danger" asp-validation-for="TruckName"></span></td>
+            </tr>
+            <tr>
+                <td>TruckType</td>
+                <td>:</td>
+                <td><input asp-for="TruckType" type="text" placeholder="Truck Type" /><br /><span class="text-danger" asp-validation-for="TruckType"></span></td>
+            </tr>
+            <tr>
+                <td>TruckNumber</td>
+                <td>:</td>
+                <td><input asp-for="TruckNumber" type="text" placeholder="Truck Number" /><br /><span class="text-danger" asp-validation-for="TruckNumber"></span></td>
+            </tr>
+            <tr>
+                <td>EngineNo</td>
+                <td>:</td>
+                <td><input asp-for="EngineNo" type="text" placeholder="Engine No" /><br /><span class="text-danger" asp-validation-for="EngineNo"></span></td>
+            </tr>
+            <tr>
+                <td>ChasisNo</td>
+                <td>:</td>
+                <td><input asp-for="ChasisNo" type="text" placeholder="Chasis No" /><br /><span class="text-danger" asp-validation-for="ChasisNo"></span></td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td>:</td>
+                <td><input asp-for="Capacity" type="number" placeholder="Capacity" /><br /><span class="text-danger" asp-validation-for="Capacity"></span></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>:</td>
+                <td><input asp-for="Price" type="number" placeholder="Price" /><br /><span class="text-danger" asp-validation-for="Price"></span></td>
+            </tr>
+        </table>
+        <div class="d-flex justify-content-evenly">
+            <input class="btn btn-outline-success " type="submit" />
+            <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="Truck" asp-action="Truck">
+                Cancel
+            </a>
+        </div>
 
-</form>
+    </form>
+</div>

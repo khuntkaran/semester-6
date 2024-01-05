@@ -46,13 +46,7 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             return View();
         }
         
-        [CheckAccess1]
-        public IActionResult Driver()
-        {
-            ViewBag.Title = "Driver";
-            ViewBagData();
-            return View();
-        }
+        
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();

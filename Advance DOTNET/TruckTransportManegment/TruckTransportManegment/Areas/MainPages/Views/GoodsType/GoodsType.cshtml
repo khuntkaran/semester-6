@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@model List<TruckTransportManegment.Areas.MainPages.Models.GoodsTypeModel>;
+<div class="container mt-5">
+    <a class="btn btn-outline-primary " asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsTypeAddEdit">Add GoodsType</a>
+
+
+    <table class="table text-center table-striped">
+        <thead>
+            <tr class="">
+                <th scope="col">GoodsType ID</th>
+                <th scope="col">GoodsType Name</th>
+                <th scope="col">Created</th>
+                <th scope="col">Modified</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var GoodsType in Model)
+            {
+                <tr>
+                    <th scope="row">@GoodsType.GoodsTypeID</th>
+                    <td>@GoodsType.GoodsTypeName</td>
+                    <td>@GoodsType.Created</td>
+                    <td>@GoodsType.Modified</td>
+                    <td>
+                        <form method="post" asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsTypeAddEdit" asp-route-GoodsTypeID="@Convert.ToInt32(GoodsType.GoodsTypeID)">
+                            <button type="submit" class="btn btn-outline-warning">Edit</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsTypeDelete" asp-route-GoodsTypeID="@Convert.ToInt32(GoodsType.GoodsTypeID)">
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

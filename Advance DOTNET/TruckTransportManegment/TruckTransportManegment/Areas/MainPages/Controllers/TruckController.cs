@@ -19,6 +19,7 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
         [CheckAccess1]
         public IActionResult TruckAddEdit(int? TruckID)
         {
+            ViewBagData();
             try
             {
                 ViewBag.Title = "Truck";
