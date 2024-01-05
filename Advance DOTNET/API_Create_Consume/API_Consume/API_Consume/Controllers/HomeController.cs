@@ -16,7 +16,7 @@ namespace API_Consume.Controllers
         }
         private readonly string apiUrl = "http://localhost:40506/User/APIUserSelectAll"; // Replace with your API URL
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             List<UserModel> employees = new List<UserModel>();
 
@@ -29,7 +29,8 @@ namespace API_Consume.Controllers
                     string data = response.Content.ReadAsStringAsync().Result;
                     dynamic jsonobj = JsonConvert.DeserializeObject(data);
                     var dataofobject = jsonobj.data;
-                    employees = JsonConvert.DeserializeObject<List<UserModel>>(dataofobject.data);
+                    var extractedData = JsonConvert.SerializeObject(dataofobject);
+                    employees = JsonConvert.DeserializeObject<List<UserModel>>(extractedData);
                 }
                 else
                 {
