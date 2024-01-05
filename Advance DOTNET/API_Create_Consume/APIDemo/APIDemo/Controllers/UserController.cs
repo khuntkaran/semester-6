@@ -53,6 +53,8 @@ namespace APIDemo.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
+
         public IActionResult APIUserDeleteByPK(int id)
         {
             User_BALBase user_BALBase = new User_BALBase();

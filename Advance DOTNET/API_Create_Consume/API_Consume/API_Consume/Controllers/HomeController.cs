@@ -14,22 +14,22 @@ namespace API_Consume.Controllers
         {
             _logger = logger;
         }
-        private readonly string apiUrl = "http://localhost:40506/User/APIUserSelectAll"; // Replace with your API URL
-
-        public async Task<IActionResult> Index()
+        private readonly string apiUrl = "http://localhost:40506/User/"; // Replace with your API URL
+        [HttpGet]
+        public IActionResult Index()
         {
             List<UserModel> employees = new List<UserModel>();
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
+                HttpResponseMessage response =  client.GetAsync(apiUrl+ "APIUserSelectAll").Result;
 
                 if (response.IsSuccessStatusCode)
                 {
                     string data = response.Content.ReadAsStringAsync().Result;
                     dynamic jsonobj = JsonConvert.DeserializeObject(data);
                     var dataofobject = jsonobj.data;
-                    var extractedData = JsonConvert.SerializeObject(dataofobject);
+                    var extractedData = JsonConvert.SerializeObject(dataofobject,Formatting.Indented);
                     employees = JsonConvert.DeserializeObject<List<UserModel>>(extractedData);
                 }
                 else
@@ -45,6 +45,27 @@ namespace API_Consume.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult DeleteData(int id)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.DeleteAsync(apiUrl + "APIUserDeleteByPK/" + id).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Delete Data
+                }
+                else
+                {
+                    // Handle error response
+                    // Example: ViewBag.ErrorMessage = "Failed to fetch employees.";
+                }
+            }
+
+            return RedirectToAction("Index");
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
