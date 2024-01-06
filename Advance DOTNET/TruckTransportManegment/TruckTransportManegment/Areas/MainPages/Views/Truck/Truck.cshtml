@@ -4,8 +4,8 @@
 @model List<TruckTransportManegment.Areas.MainPages.Models.TruckModel>;
 <!-- Main css -->
 <link rel="stylesheet" href="~/css/Cardcss.css">
-
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="container mt-5">
     <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit">Add Truck</a>
 
@@ -24,7 +24,8 @@
                                 <div class=" btn-group btn-group-sm">
                                     <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
                                         <button type="submit" class="btn btn-warning tooltips " data-placement="top" data-toggle="tooltip"
-                                           data-original-title="Edit"><i class="fa fa-pencil"></i> </button>
+                                                data-original-title="Edit"><i class="fa fa-pencil"></i>
+                                        </button>
                                     </form>
                                     <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckDelete" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
                                         <button type="submit" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"

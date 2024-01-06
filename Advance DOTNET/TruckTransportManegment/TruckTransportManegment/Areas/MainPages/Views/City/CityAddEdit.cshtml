@@ -12,30 +12,89 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-<h1>@ViewBag.Data</h1>
-<div class="container">
-    <form method="post" asp-area="MainPages" asp-controller="City" asp-action="Save">
-        <input type="hidden" asp-for="CityID" />
-        <table class="table" align="center">
-            <tr>
-                <td>CityName</td>
-                <td>:</td>
-                <td><input asp-for="CityName" type="text" placeholder="City Name" /><br /><span class="text-danger" asp-validation-for="CityName"></span></td>
-            </tr>
-            <tr>
-                <td>City Phone</td>
-                <td>:</td>
-                <td><input asp-for="CityCode" type="text" placeholder="City Code" /><br /><span class="text-danger" asp-validation-for="CityCode"></span></td>
-            </tr>
-            
 
-        </table>
-        <div class="d-flex justify-content-evenly">
-            <input class="btn btn-outline-success " type="submit" />
-            <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="City" asp-action="City">
-                Cancel
-            </a>
+<section class="section " id="contactus">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title">
+                    <h2>@ViewBag.Data</h2>
+                    <p>
+                        I design and develop services for customers of all sizes, specializing in creating stylish, modern
+                        websites
+                    </p>
+                </div>
+            </div>
         </div>
+        <div class="row flex-row-reverse">
+            <div class="col-md-7 col-lg-8 m-15px-tb">
+                <div class="contact-form">
+                    <form method="post" asp-area="MainPages" asp-controller="City" asp-action="Save" class="contactform contact_form" id="contact_form">
+                        <input type="hidden" asp-for="CityID" />
 
-    </form>
-</div>
+                        <div class="returnmessage valid-feedback p-15px-b"
+                             data-success="Your message has been received, We will contact you soon."></div>
+                        <div class="empty_notice invalid-feedback p-15px-b"><span>Please Fill Required Fields</span></div>
+
+                        <div class="row">
+                            <div class="col-lg-4 pt-2">City Name</div>
+                            <div class="col-lg-8 ">
+                                <input class="form-control" asp-for="CityName" type="text" placeholder="City Name" /><br /><span class="text-danger" asp-validation-for="CityName"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 pt-2">City Code</div>
+                            <div class="col-lg-8">
+
+                                <input class="form-control" asp-for="CityCode" type="text" placeholder="City Code" /><br /><span class="text-danger" asp-validation-for="CityCode"></span>
+                            </div>
+                        </div>
+                      
+
+                        <div class="row">
+
+                            <div class="col-6 d-flex justify-content-center ">
+                                <div class="send ">
+                                    <button type="submit" id="send_message" class="px-btn theme"><span>Submit</span> <i class="arrow"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="send">
+                                    <a asp-area="MainPages" asp-controller="City" asp-action="City" id="send_message" class="px-btn theme"><span>Cancle</span> <i class="arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 m-15px-tb">
+                <div class="contact-name">
+                    <h5>Mail</h5>
+                    <p>
+                        kkk@Transport.com
+                    </p>
+                </div>
+                <div class="contact-name">
+                    <h5>Visit My Studio</h5>
+                    <p>Warnwe Park Streetperrine, <br>FL 33157 New York City</p>
+                </div>
+                <div class="contact-name">
+                    <h5>Phone</h5>
+                    <p>+01 123 654 8096</p>
+                </div>
+                <div class="social-share nav">
+                    <a class="dribbble" href="#">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a class="behance" href="#">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a class="linkedin" href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
