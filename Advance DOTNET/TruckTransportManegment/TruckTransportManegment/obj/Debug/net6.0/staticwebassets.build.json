@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9vyzNFPb5OPvczWT0lfRHMHSltW9mA6koCS9lEp2IVg=",
+  "Hash": "ffueRqsuS3YVzh5C/QeWtlfFK4jbuLZSXBRNgrWX9uE=",
   "Source": "TruckTransportManegment",
   "BasePath": "_content/TruckTransportManegment",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\Cardcss.css",
+      "SourceId": "TruckTransportManegment",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\",
+      "BasePath": "_content/TruckTransportManegment",
+      "RelativePath": "css/Cardcss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Cardcss.css"
     },
     {
       "Identity": "E:\\semester-6\\Advance DOTNET\\TruckTransportManegment\\TruckTransportManegment\\wwwroot\\css\\style.css",

@@ -54,7 +54,7 @@
                 <a asp-area="MainPages" asp-controller="City" asp-action="City" class="nav-item nav-link  @(ViewBag.Title=="City"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">City</a>*@
                 <div class="dropdown nav-item nav-link @(ViewBag.Title=="Truck"||ViewBag.Title=="Driver"||ViewBag.Title=="GoodsType"||ViewBag.Title=="City"?"active":"")">
                     <div  id="dLabel" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdowntrigger
+                        Other
                       </div>
                     <div class="dropdown-menu" >
                         <a asp-area="MainPages" asp-controller="Truck" asp-action="Truck" class=" p-2 nav-item nav-link  @(ViewBag.Title=="Truck"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Truck</a>

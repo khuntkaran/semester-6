@@ -1,59 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@{
+﻿@{
     Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
 }
 @model List<TruckTransportManegment.Areas.MainPages.Models.TruckModel>;
+<!-- Main css -->
+<link rel="stylesheet" href="~/css/Cardcss.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container mt-5">
-    <a class="btn btn-outline-primary " asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit">Add Truck</a>
+    <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit">Add Truck</a>
 
-
-    <table class="table text-center table-striped">
-        <thead>
-            <tr class="">
-                <th scope="col">Truck ID</th>
-                <th scope="col">Truck Name</th>
-                <th scope="col">Truck Number</th>
-                <th scope="col">Truck Type</th>
-                <th scope="col">Engine No</th>
-                <th scope="col">Chasis No</th>
-                <th scope="col">Capacity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Created</th>
-                <th scope="col">Modified</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="container">
+        <div class="row">
             @foreach (var truck in Model)
             {
-                <tr>
-                    <th scope="row">@truck.TruckID</th>
-                    <td>@truck.TruckName</td>
-                    <td>@truck.TruckType</td>
-                    <td>@truck.EngineNo</td>
-                    <td>@truck.EngineNo</td>
-                    <td>@truck.ChasisNo</td>
-                    <td>@truck.Capacity</td>
-                    <td>@truck.Price</td>
-                    <td>@truck.Created</td>
-                    <td>@truck.Modified</td>
-                    <td>
-                        <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
-                            <button type="submit" class="btn btn-outline-warning">Edit</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckDelete" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
-                            <button type="submit" class="btn btn-outline-danger">Delete</button>
-                        </form>
-                    </td>
-                </tr>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card radius-10 m-b-30 border-danger">
+                        <div class="card-body row">
+                            <div class="col-10 card-title align-self-center mb-0">
+                                <h5>@truck.TruckName</h5>
+                                <p class="m-0">@truck.TruckNumber</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-end">
+                                <div class=" btn-group btn-group-sm">
+                                    <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
+                                        <button type="submit" class="btn btn-warning tooltips " data-placement="top" data-toggle="tooltip"
+                                           data-original-title="Edit"><i class="fa fa-pencil"></i> </button>
+                                    </form>
+                                    <form method="post" asp-area="MainPages" asp-controller="Truck" asp-action="TruckDelete" asp-route-TruckID="@Convert.ToInt32(truck.TruckID)">
+                                        <button type="submit" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
+                                           data-original-title="Delete"><i class="fa fa-times"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-truck "></i> &nbsp;Truck Type : @truck.TruckType</li>
+                            <li class="list-group-item"><i class="fa fa-ils"></i> &nbsp;Engine No : @truck.EngineNo</li>
+                            <li class="list-group-item"><i class="fa fa-cc"></i> &nbsp;Chasis No : @truck.ChasisNo</li>
+                            <li class="list-group-item"><i class="fa fa-cubes"></i> &nbsp;Capacity : @truck.Capacity</li>
+                            <li class="list-group-item"> <i class="fa fa-inr "></i> &nbsp;Price : @truck.Price</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-plus-o"></i> &nbsp;Created : @truck.Created</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-check-o"></i> &nbsp;Modified : @truck.Modified</li>
+                        </ul>
+                    </div>
+                </div>
             }
-        </tbody>
-    </table>
+        </div>
+    </div>
 </div>
