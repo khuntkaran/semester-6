@@ -48,13 +48,25 @@
                 <a asp-area="MainPages" asp-controller="Pages" asp-action="Contact" class="nav-item nav-link  @(ViewBag.Title=="Contact"?"active":"")">Contact</a>
                 <a asp-area="MainPages" asp-controller="Pages" asp-action="Order" class="nav-item nav-link  @(ViewBag.Title=="Order"?"active":"")">Order</a>
                 <a asp-area="MainPages" asp-controller="Pages" asp-action="Booking" class="nav-item nav-link  @(ViewBag.Title=="Booking"?"active":"")@(ViewBag.IsAdmin == "True" ? "d-none" : "")">Booking</a>
-                <a asp-area="MainPages" asp-controller="Truck" asp-action="Truck" class="nav-item nav-link  @(ViewBag.Title=="Truck"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Truck</a>
+                @*<a asp-area="MainPages" asp-controller="Truck" asp-action="Truck" class="nav-item nav-link  @(ViewBag.Title=="Truck"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Truck</a>
                 <a asp-area="MainPages" asp-controller="Driver" asp-action="Driver" class="nav-item nav-link  @(ViewBag.Title=="Driver"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Driver</a>
                 <a asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsType" class="nav-item nav-link  @(ViewBag.Title=="GoodsType"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">GoodsType</a>
-                <a asp-area="MainPages" asp-controller="City" asp-action="City" class="nav-item nav-link  @(ViewBag.Title=="City"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">City</a>
+                <a asp-area="MainPages" asp-controller="City" asp-action="City" class="nav-item nav-link  @(ViewBag.Title=="City"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">City</a>*@
+                <div class="dropdown nav-item nav-link @(ViewBag.Title=="Truck"||ViewBag.Title=="Driver"||ViewBag.Title=="GoodsType"||ViewBag.Title=="City"?"active":"")">
+                    <div  id="dLabel" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdowntrigger
+                      </div>
+                    <div class="dropdown-menu" >
+                        <a asp-area="MainPages" asp-controller="Truck" asp-action="Truck" class=" p-2 nav-item nav-link  @(ViewBag.Title=="Truck"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Truck</a>
+                        <a asp-area="MainPages" asp-controller="Driver" asp-action="Driver" class=" p-2 nav-item nav-link  @(ViewBag.Title=="Driver"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">Driver</a>
+                        <a asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsType" class=" p-2  nav-item nav-link  @(ViewBag.Title=="GoodsType"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">GoodsType</a>
+                        <a asp-area="MainPages" asp-controller="City" asp-action="City" class=" p-2 nav-item nav-link  @(ViewBag.Title=="City"?"active":"")@(ViewBag.IsAdmin == "False" ? "d-none" : "")">City</a>
+
+                    </div>
+                </div>
                 <a asp-area="MainPages" asp-controller="Pages" asp-action="Logout" class="nav-item nav-link  @(ViewBag.Title=="Logout"?"active":"")">Logout</a>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+012 345 6789</h4>
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+012 3456789</h4>
         </div>
     </nav>
     <!-- Navbar End -->
