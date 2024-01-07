@@ -31,6 +31,7 @@ namespace APIDemo.Controllers
         }
 
         [HttpGet]
+        [Route("{id}")]
         public IActionResult APIUserSelectByPK(int id)
         {
             User_BALBase user_BALBase = new User_BALBase();

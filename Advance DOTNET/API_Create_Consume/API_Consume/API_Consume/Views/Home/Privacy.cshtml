@@ -1,6 +1,48 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@model API_Consume.Models.UserModel;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+<table>
+    <form method="post" asp-controller="Home" asp-action="Save">
+        <input asp-for="EmpID" hidden/>
+        <tr>
+            <td>EmpName</td>
+            <td><input asp-for="EmpName" /><br /><span asp-validation-for="EmpName"></span></td>
+        </tr>
+        <tr>
+            <td>EmpCode</td>
+            <td><input asp-for="EmpCode" /><br /><span asp-validation-for="EmpCode"></span></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input asp-for="Email" /><br /><span asp-validation-for="Email"></span></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input asp-for="Contact" /><br /><span asp-validation-for="Contact"></span></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="number" asp-for="Salary" /><br /><span asp-validation-for="Salary"></span></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit"/>
+                <button type="submit">Add</button>
+             </td>
+        </tr>
+    </form>
+</table>
