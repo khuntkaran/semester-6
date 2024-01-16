@@ -1,9 +1,7 @@
 ﻿using API_Consume.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Text.Json.Serialization;
 
 namespace API_Consume.Controllers
 {
@@ -17,7 +15,8 @@ namespace API_Consume.Controllers
 
 
         private readonly string apiUrl = "http://localhost:40506/User/"; // Replace with your API URL
-        [HttpGet]
+
+
         public IActionResult Index()
         {
             List<UserModel> employees = new List<UserModel>();
@@ -43,7 +42,6 @@ namespace API_Consume.Controllers
 
             return View(employees);
         }
-
         public IActionResult Privacy(int? id)
         {
             UserModel employee = new UserModel();
@@ -71,23 +69,22 @@ namespace API_Consume.Controllers
             }
             return View(employee);
         }
-
         public IActionResult Save(UserModel userModel)
         {
             if (ModelState.IsValid)
             {
                 MultipartFormDataContent dataContent = new MultipartFormDataContent();
                
-                dataContent.Add(new StringContent(userModel.EmpName));
-                dataContent.Add(new StringContent(userModel.EmpCode));
-                dataContent.Add(new StringContent(userModel.Email));
-                dataContent.Add(new StringContent(userModel.Contact));
-                dataContent.Add(new StringContent(userModel.Salary.ToString()));
+                dataContent.Add(new StringContent(userModel.EmpName), "EmpName");
+                dataContent.Add(new StringContent(userModel.EmpCode), "EmpCode");
+                dataContent.Add(new StringContent(userModel.Email), "Email");
+                dataContent.Add(new StringContent(userModel.Contact), "Contact");
+                dataContent.Add(new StringContent(userModel.Salary.ToString()), "Salary");
                 using (HttpClient client = new HttpClient())
                 {
                     if (userModel.EmpID != null)
                     {
-                        dataContent.Add(new StringContent(userModel.EmpID.ToString()));
+                        dataContent.Add(new StringContent(userModel.EmpID.ToString()), "EmpID");
                         HttpResponseMessage response = client.PutAsync(apiUrl + "APIUserUpdateByPK",dataContent ).Result;
                     }
                     else
@@ -121,22 +118,6 @@ namespace API_Consume.Controllers
             return RedirectToAction("Index");
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

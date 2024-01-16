@@ -52,8 +52,6 @@ E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Microsoft.Practices.EnterpriseLibrary.Common.dll
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Microsoft.Practices.EnterpriseLibrary.Data.dll
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Microsoft.OpenApi.dll
-E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Quintsys.Practices.EnterpriseLibrary.Data.dll
-E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Quintsys.System.dll
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -84,3 +82,18 @@ E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\obj\Debug\net6.0
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\obj\Debug\net6.0\APIDemo.pdb
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\obj\Debug\net6.0\APIDemo.genruntimeconfig.cache
 E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\obj\Debug\net6.0\ref\APIDemo.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Data.Odbc.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Data.OleDb.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Unity.Abstractions.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\Unity.Interception.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\linux\lib\netcoreapp2.0\System.Data.Odbc.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\osx\lib\netcoreapp2.0\System.Data.Odbc.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Data.Odbc.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+E:\semester-6\Advance DOTNET\API_Create_Consume\APIDemo\APIDemo\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

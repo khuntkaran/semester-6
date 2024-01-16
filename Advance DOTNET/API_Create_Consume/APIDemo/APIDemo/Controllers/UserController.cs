@@ -55,7 +55,6 @@ namespace APIDemo.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-
         public IActionResult APIUserDeleteByPK(int id)
         {
             User_BALBase user_BALBase = new User_BALBase();
@@ -77,7 +76,7 @@ namespace APIDemo.Controllers
         }
 
         [HttpPost]
-        public IActionResult APIUserInsert(UserModel userModel)
+        public IActionResult APIUserInsert([FromForm]UserModel userModel)
         {
             User_BALBase user_BALBase = new User_BALBase();
             bool result = user_BALBase.API_User_Insert(userModel);
@@ -91,13 +90,13 @@ namespace APIDemo.Controllers
             else
             {
                 response.Add("Status", false);
-                response.Add("Message", "Error");
+                response.Add("Message", "not inserted --> Error");
                 return Ok(response);
             }
         }
 
         [HttpPut]
-        public IActionResult APIUserUpdateByPK(UserModel userModel)
+        public IActionResult APIUserUpdateByPK([FromForm] UserModel userModel)
         {
             User_BALBase user_BALBase = new User_BALBase();
             bool result = user_BALBase.API_User_UpdateByPK(userModel);
