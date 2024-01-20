@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTG9naW5cX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Booking/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXEJvb2tpbmdcQm9va2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Booking/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXEJvb2tpbmdcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/City/City.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXENpdHlcQ2l0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,10 +72,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEFib3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Booking.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXEJvb2tpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXENvbnRhY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,10 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXE1haW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Order.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFpblBhZ2VzXFZpZXdzXFBhZ2VzXE9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/semester-6/Advance DOTNET/TruckTransportManegment/TruckTransportManegment/Areas/MainPages/Views/Pages/Services.cshtml]

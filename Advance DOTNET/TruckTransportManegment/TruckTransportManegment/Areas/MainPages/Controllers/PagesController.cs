@@ -32,21 +32,6 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             ViewBagData();
             return View();
         }
-        public IActionResult Order()
-        {
-            ViewBag.Title = "Order";
-            ViewBagData();
-            return View();
-        }
-        [CheckAccess2]
-        public IActionResult Booking()
-        {
-            ViewBag.Title = "Booking";
-            ViewBagData();
-            return View();
-        }
-        
-        
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();

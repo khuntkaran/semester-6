@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
+}
+@model List<TruckTransportManegment.Areas.MainPages.Models.BookingModel>;
+
+<h1>Order</h1>
+<table>
+
+    <tr>
+        <th>BookingID</th>
+        <th>PickUpCityName</th>
+        <th>DropCityName</th>
+        <th>DriveName</th>
+        <th>TruckName</th>
+        <th>GoodsTypeName</th>
+        <th>UserID</th>
+    </tr>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.BookingID</td>
+            <td>@order.PickUpCityName</td>
+            <td>@order.DropCityName</td>
+            <td>@order.DriverName</td>
+            <td>@order.TruckName</td>
+            <td>@order.GoodsTypeName</td>
+            <td>@order.UserID</td>
+        </tr>
+    }
+</table>
