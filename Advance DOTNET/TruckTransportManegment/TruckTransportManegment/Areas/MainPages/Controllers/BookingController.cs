@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TruckTransportManegment.Areas.Login.Models;
+using TruckTransportManegment.Areas.MainPages.Models;
 using TruckTransportManegment.DAL;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
@@ -17,8 +19,17 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
         public IActionResult Booking()
         {
             ViewBag.Title = "Booking";
+            Booking_DALBase booking_DALBase = new Booking_DALBase();
             ViewBagData();
-            return View();
+            return View(booking_DALBase.Add_Edit_Order());
+        }
+
+        public IActionResult Save(BookingModel bookingModel) 
+        {
+            bookingModel.UserID= Convert.ToInt32(HttpContext.Session.GetInt32("UserID"));
+            Booking_DALBase booking_DALBase = new Booking_DALBase();
+            booking_DALBase.Save(bookingModel);
+            return RedirectToAction("Order");
         }
         public void ViewBagData()
         {

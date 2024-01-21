@@ -1,9 +1,148 @@
-﻿@*
+﻿@using TruckTransportManegment.Areas.MainPages.Models;
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+
+
+@model TruckTransportManegment.Areas.MainPages.Models.BookingModel;
 @{
     Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
 }
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
 <h1>Booking</h1>
+
+
+    <form method="post" asp-area="MainPages" asp-controller="Booking" asp-action="Save">
+        <input type="hidden" asp-for="BookingID" />
+        <table>
+        <tr>
+            <td>Truck</td>
+            <td>
+                <select class=" " asp-for="TruckID">
+                    <option value="none" selected disabled hidden>Select a Truck</option>
+                        @foreach (TruckModel ops in Model.Trucks)
+                        {
+                        <option value="@ops.TruckID">@ops.TruckName</option>
+                        }
+                </select><br />
+                <span class="text-danger" asp-validation-for="TruckID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>PickupCity</td>
+            <td>
+                <select class=" " asp-for="PickUpCityID">
+                    <option value="none" selected disabled hidden>Select a PickupCity</option>
+                        @foreach (CityModel ops in Model.Cities)
+                        {
+                        <option value="@ops.CityID">@ops.CityName</option>
+                        }
+                </select><br />
+                <span class="text-danger" asp-validation-for="PickUpCityID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>DropCity</td>
+            <td>
+                <select class=" " asp-for="DropCityID">
+                    <option value="none" selected disabled hidden>Select a DropCity</option>
+                        @foreach (CityModel ops in Model.Cities)
+                        {
+                        <option value="@ops.CityID">@ops.CityName</option>
+                        }
+                </select><br />
+                <span class="text-danger" asp-validation-for="DropCityID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>GoodsType</td>
+            <td>
+                <select class=" " asp-for="GoodsTypeID">
+                    <option value="none" selected disabled hidden>Select a GoodsType</option>
+                        @foreach (GoodsTypeModel ops in Model.Goods)
+                        {
+                        <option value="@ops.GoodsTypeID">@ops.GoodsTypeName</option>
+                        }
+                </select><br />
+                <span class="text-danger" asp-validation-for="GoodsTypeID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Driver</td>
+            <td>
+                <select class=" " asp-for="DriverID">
+                    <option value="none" selected disabled hidden>Select a Driver</option>
+                        @foreach (DriverModel ops in Model.Drivers)
+                        {
+                        <option value="@ops.DriverID">@ops.DriverName</option>
+                        }
+                </select><br />
+                <span class="text-danger" asp-validation-for="DriverID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Distance</td>
+            <td>
+                <input asp-for="Distance" type="number" /><br />
+                <span class="text-danger" asp-validation-for="Distance"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                <input asp-for="Price" type="number" /><br />
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>
+                <input asp-for="Weight" type="number" /><br />
+                <span class="text-danger" asp-validation-for="Weight"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Pickupdate</td>
+            <td>
+                <input asp-for="PickUpDate" type="datetime-local" /><br />
+                <span class="text-danger" asp-validation-for="PickUpDate"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Dropdate</td>
+            <td>
+                <input asp-for="DropDate" type="datetime-local" /><br />
+                <span class="text-danger" asp-validation-for="DropDate"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>FromAddress</td>
+            <td>
+                <input asp-for="FromAddress" type="tel" /><br />
+                <span class="text-danger" asp-validation-for="FromAddress"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>ToAddress</td>
+            <td>
+                <input asp-for="ToAddress" type="tel" /><br />
+                <span class="text-danger" asp-validation-for="ToAddress"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" /></td>
+            <td>
+                <a class="btn btn-outline-danger" asp-area="MainPages" asp-controller="Booking" asp-action="Order">
+                    Cancel
+                </a>
+            </td>
+        </tr>
+        </table>
+    </form>
+
