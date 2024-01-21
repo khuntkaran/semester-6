@@ -24,14 +24,15 @@ namespace TruckTransportManegment.Areas.MainPages.Models
         public int      DriverID { get; set; }
         public string   DriverName { get; set; }
         [Required]
-        public double   Distance { get; set; }
+        public double?   Distance { get; set; }
         [Required]
-        public double   Price { get; set; }
+        public double?   Price { get; set; }
         [Required]
-        public double   Weight { get; set; }
+        public double?   Weight { get; set; }
         [Required]
-        public DateTime PickUpDate { get; set; }
-        public DateTime DropDate { get; set; }
+        public DateTime? PickUpDate { get; set; }
+        [Required]
+        public DateTime? DropDate { get; set; }
         [Required]
         public string   FromAddress { get; set; }
         [Required]

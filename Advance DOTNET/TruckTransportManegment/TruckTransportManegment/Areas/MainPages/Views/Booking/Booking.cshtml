@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">Truck</div>
                             <div class="col-lg-8 ">
-                                <select class=" " asp-for="TruckID">
+                                <select class="form-control"  asp-for="TruckID">
                                     <option value="none" selected disabled hidden>Select a Truck</option>
                                     @foreach (TruckModel ops in Model.Trucks)
                                     {
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">PickupCity</div>
                             <div class="col-lg-8">
-                                <select class=" " asp-for="PickUpCityID">
+                                <select class="form-control" asp-for="PickUpCityID">
                                     <option value="none" selected disabled hidden>Select a PickupCity</option>
                                     @foreach (CityModel ops in Model.Cities)
                                     {
@@ -69,7 +69,7 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">DropCity</div>
                             <div class="col-lg-8 ">
-                                <select class=" " asp-for="DropCityID">
+                                <select class="form-control" asp-for="DropCityID">
                                     <option value="none" selected disabled hidden>Select a DropCity</option>
                                     @foreach (CityModel ops in Model.Cities)
                                     {
@@ -82,7 +82,7 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">GoodsType</div>
                             <div class="col-lg-8">
-                                <select class=" " asp-for="GoodsTypeID">
+                                <select class="form-control"  asp-for="GoodsTypeID">
                                     <option value="none" selected disabled hidden>Select a GoodsType</option>
                                     @foreach (GoodsTypeModel ops in Model.Goods)
                                     {
@@ -95,7 +95,7 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">Driver</div>
                             <div class="col-lg-8 ">
-                                <select class=" " asp-for="DriverID">
+                                <select class="form-control"  asp-for="DriverID">
                                     <option value="none" selected disabled hidden>Select a Driver</option>
                                     @foreach (DriverModel ops in Model.Drivers)
                                     {
@@ -108,49 +108,49 @@
                         <div class="row">
                             <div class="col-lg-4 pt-2">Distance</div>
                             <div class="col-lg-8">
-                                <input asp-for="Distance" type="number" /><br />
+                                <input class="form-control" placeholder="Distance" asp-for="Distance" type="number" /><br />
                                 <span class="text-danger" asp-validation-for="Distance"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-4 pt-2">Price</div>
                             <div class="col-lg-8 ">
-                                <input asp-for="Price" type="number" /><br />
+                                <input class="form-control" placeholder="Price" asp-for="Price" type="number" /><br />
                                 <span class="text-danger" asp-validation-for="Price"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-4 pt-2">Weight</div>
                             <div class="col-lg-8">
-                                <input asp-for="Weight" type="number" /><br />
+                                <input class="form-control" placeholder="Weight" asp-for="Weight" type="number" /><br />
                                 <span class="text-danger" asp-validation-for="Weight"></span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 pt-2">Pickupdate</div>
+                            <div class="col-lg-4 pt-2">PickUpdate</div>
                             <div class="col-lg-8 ">
-                                <input asp-for="PickUpDate" type="datetime-local" /><br />
+                                <input class="form-control" placeholder="PickUpdate" asp-for="PickUpDate" type="datetime-local" /><br />
                                 <span class="text-danger" asp-validation-for="PickUpDate"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-4 pt-2">Dropdate</div>
                             <div class="col-lg-8">
-                                <input asp-for="DropDate" type="datetime-local" /><br />
+                                <input class="form-control" asp-for="DropDate" type="datetime-local" />
                                 <span class="text-danger" asp-validation-for="DropDate"></span>
                             </div>
                         </div>
                          <div class="row">
                             <div class="col-lg-4 pt-2">FromAddress</div>
                             <div class="col-lg-8">
-                                <input asp-for="FromAddress" type="tel" /><br />
+                                <input class="form-control" placeholder="FromAddress" asp-for="FromAddress" type="tel" /><br />
                                 <span class="text-danger" asp-validation-for="FromAddress"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-4 pt-2">ToAddress</div>
                             <div class="col-lg-8">
-                                <input asp-for="ToAddress" type="tel" /><br />
+                                <input class="form-control" placeholder="ToAddress" asp-for="ToAddress" type="tel" /><br />
                                 <span class="text-danger" asp-validation-for="ToAddress"></span>
                             </div>
                         </div>
