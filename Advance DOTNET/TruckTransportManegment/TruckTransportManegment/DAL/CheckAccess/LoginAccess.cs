@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace TruckTransportManegment.DAL
+namespace TruckTransportManegment.DAL.CheckAccess
 {
-    public class CheckAccess2 : ActionFilterAttribute, IAuthorizationFilter
+    public class LoginAccess : ActionFilterAttribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            if (Convert.ToBoolean(filterContext.HttpContext.Session.GetString("IsAdmin")))
+            if (filterContext.HttpContext.Session.GetInt32("UserID") == null)
             {
                 filterContext.Result = new RedirectResult("~/Login/Validation/Login");
             }

@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TruckTransportManegment.DAL;
+using TruckTransportManegment.DAL.CheckAccess;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
 {
-    [CheckAccess]
+    [LoginAccess]
     [Area("MainPages")]
     public class PagesController : Controller
     {

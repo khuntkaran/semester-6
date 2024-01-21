@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TruckTransportManegment.Areas.MainPages.Models;
 using TruckTransportManegment.DAL;
+using TruckTransportManegment.DAL.CheckAccess;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
 {
-    [CheckAccess]
+    [LoginAccess]
     [Area("MainPages")]
     public class TruckController : Controller
     {
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult Truck()
         {
             ViewBag.Title = "Truck";
@@ -16,7 +17,7 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             Truck_DALBase truck_DALBase = new Truck_DALBase();
             return View(truck_DALBase.Truck_SelectAll());
         }
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult TruckAddEdit(int? TruckID)
         {
             ViewBagData();

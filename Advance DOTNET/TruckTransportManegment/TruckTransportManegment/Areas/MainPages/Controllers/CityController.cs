@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TruckTransportManegment.Areas.MainPages.Models;
 using TruckTransportManegment.DAL;
+using TruckTransportManegment.DAL.CheckAccess;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
 {
-    [CheckAccess]
+    [LoginAccess]
     [Area("MainPages")]
     public class CityController : Controller
     {
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult City()
         {
             ViewBag.Title = "City";
@@ -16,7 +17,7 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             City_DALBase city_DALBase = new City_DALBase();
             return View(city_DALBase.City_SelectAll());
         }
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult CityAddEdit(int? CityID)
         {
             ViewBagData();

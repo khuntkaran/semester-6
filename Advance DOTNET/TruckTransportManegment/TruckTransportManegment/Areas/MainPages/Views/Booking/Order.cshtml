@@ -7,29 +7,65 @@
     Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
 }
 @model List<TruckTransportManegment.Areas.MainPages.Models.BookingModel>;
+<!-- Main css -->
+<link rel="stylesheet" href="~/css/Cardcss.css">
 
-<h1>Order</h1>
-<table>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <tr>
-        <th>BookingID</th>
-        <th>PickUpCityName</th>
-        <th>DropCityName</th>
-        <th>DriveName</th>
-        <th>TruckName</th>
-        <th>GoodsTypeName</th>
-        <th>UserID</th>
-    </tr>
-    @foreach (var order in Model)
-    {
-        <tr>
-            <td>@order.BookingID</td>
-            <td>@order.PickUpCityName</td>
-            <td>@order.DropCityName</td>
-            <td>@order.DriverName</td>
-            <td>@order.TruckName</td>
-            <td>@order.GoodsTypeName</td>
-            <td>@order.UserID</td>
-        </tr>
-    }
-</table>
+
+
+<div class="container mt-5">
+
+
+
+    <div class="container">
+        <div class="row">
+            @foreach (var order in Model)
+            {
+                <div class="col-md-6 col-xl-4">
+                    <div class="card radius-10 m-b-30 border-danger">
+                        <div class="card-body row">
+                            <div class="col-10 card-title align-self-center mb-0">
+                                <h5>@order.BookingID : @order.PickUpCityName To @order.DropCityName</h5>
+                                <p class="m-0 @(ViewBag.IsAdmin == "False" ? "d-none" : "")">@order.UserID @order.UserName</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-end @(ViewBag.IsAdmin == "True" ? "d-none" : "")">
+                                <div class=" btn-group btn-group-sm">
+                                    <form method="post" asp-area="MainPages" asp-controller="Booking" asp-action="Booking" asp-route-BookingID="@order.BookingID">
+                                        <button type="submit" class="btn btn-warning tooltips " data-placement="top" data-toggle="tooltip"
+                                                data-original-title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                    </form>
+                                    <form method="post" asp-area="MainPages" asp-controller="Booking" asp-action="CancleBooking" asp-route-BookingID="@order.BookingID">
+                                        <button type="submit" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
+                                                data-original-title="Delete">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-truck"></i> &nbsp;Truck : @order.TruckName</li>
+                            <li class="list-group-item"><i class="fa fa-cubes"></i> &nbsp;GoodsType : @order.GoodsTypeName</li>
+                            <li class="list-group-item"><i class="fa fa-id-card"></i> &nbsp;Driver : @order.DriverName</li>
+
+                            <li class="list-group-item"><i class="fa fa-arrows-h "></i> &nbsp;Distance : @order.Distance</li>
+                            <li class="list-group-item"><i class="fa fa-inr"></i> &nbsp;Price : @order.Price</li>
+                            <li class="list-group-item"><i class="fa fa-crosshairs "></i> &nbsp;Weight : @order.Weight</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-minus-o "></i> &nbsp;PickUpDate : @order.PickUpDate</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-o "></i> &nbsp;DropDate : @order.DropDate</li>
+                            <li class="list-group-item"><i class="fa fa-map-marker"></i> &nbsp;FromAddress : @order.FromAddress</li>
+                            <li class="list-group-item"><i class="fa fa-location-arrow"></i> &nbsp;ToAddress : @order.ToAddress</li>
+
+                            <li class="list-group-item"><i class="fa fa-calendar-plus-o"></i> &nbsp;Created : @order.Created</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-check-o"></i> &nbsp;Modified : @order.Modified</li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

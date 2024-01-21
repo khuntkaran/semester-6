@@ -2,15 +2,16 @@
 using DriverTransportManegment.DAL;
 using TruckTransportManegment.DAL;
 using TruckTransportManegment.Areas.MainPages.Models;
+using TruckTransportManegment.DAL.CheckAccess;
 
 namespace DriverTransportManegment.Areas.MainPages.Controllers
 {
-    [CheckAccess]
+    [LoginAccess]
     [Area("MainPages")]
     public class DriverController : Controller
     {
 
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult Driver()
         {
             ViewBag.Title = "Driver";
@@ -18,7 +19,7 @@ namespace DriverTransportManegment.Areas.MainPages.Controllers
             Driver_DALBase driver_DALBase = new Driver_DALBase();
             return View(driver_DALBase.Driver_SelectAll());
         }
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult DriverAddEdit(int? DriverID)
         {
             ViewBagData();

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace TruckTransportManegment.DAL
+namespace TruckTransportManegment.DAL.CheckAccess
 {
-    public class CheckAccess1 : ActionFilterAttribute, IAuthorizationFilter
+    public class AdminAccess : ActionFilterAttribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {

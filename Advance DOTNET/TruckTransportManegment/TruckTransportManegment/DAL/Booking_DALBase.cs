@@ -9,24 +9,22 @@ namespace TruckTransportManegment.DAL
 {
     public class Booking_DALBase
     {
-        public List<BookingModel> Order_SelectAll()
+        public List<BookingModel> Order_SelectAll(int? userID)
         {
             try
             {
-                /*City_DALBase city_DALBase = new City_DALBase();
-                Driver_DALBase driver_DALBase = new Driver_DALBase();
-                GoodsType_DALBase goodsType_DALBase = new GoodsType_DALBase();
-                Truck_DALBase truck_DALBase = new Truck_DALBase();
-
-                List<bookingModel> bookingModel = city_DALBase.City_SelectAll();
-                List<DriverModel> driverModel = driver_DALBase.Driver_SelectAll();
-                List<GoodsTypeModel> goodsTypeModel = goodsType_DALBase.GoodsType_SelectAll();
-                List<TruckModel>  truckModel = truck_DALBase.Truck_SelectAll();
-*/
-
-
+                
                 SqlDatabase sqlDatabase = new SqlDatabase(DAL_Helpers.ConnString);
-                DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("API_TruckWiseBooking_SelectAll");
+                DbCommand dbCommand;
+                if (userID != null)
+                {
+                    dbCommand = sqlDatabase.GetStoredProcCommand("API_TruckWiseBooking_SelectAll_By_UserID");
+                    sqlDatabase.AddInParameter(dbCommand, "@UserID", SqlDbType.Int, userID);
+                }
+                else
+                {
+                    dbCommand = sqlDatabase.GetStoredProcCommand("API_TruckWiseBooking_SelectAll");
+                }
                 List<BookingModel> bookingModels = new List<BookingModel>();
                 
                 using (IDataReader dr = sqlDatabase.ExecuteReader(dbCommand))
@@ -36,7 +34,8 @@ namespace TruckTransportManegment.DAL
 
                         BookingModel bookingModel = new BookingModel();
                         bookingModel.BookingID= Convert.ToInt32(dr["BookingID"].ToString()); 
-                        bookingModel.UserID= Convert.ToInt32(dr["UserID"].ToString()); 
+                        bookingModel.UserID= Convert.ToInt32(dr["UserID"].ToString());
+                        bookingModel.UserName = dr["UserName"].ToString();
                         bookingModel.TruckID=Convert.ToInt32(dr["TruckID"].ToString()); 
                         bookingModel.TruckName=dr["TruckName"].ToString(); 
                         bookingModel.PickUpCityID=Convert.ToInt32(dr["PickUpCityID"].ToString()); 
@@ -67,12 +66,41 @@ namespace TruckTransportManegment.DAL
             }
         }
 
-        public BookingModel Add_Edit_Order()
+        public BookingModel Add_Edit_Order(int? BookingID)
         {
             BookingModel bookingModel = new BookingModel();
             try
             {
+                if(BookingID!= null)
+                {
+                    SqlDatabase sqlDatabase = new SqlDatabase(DAL_Helpers.ConnString);
+                    DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("API_TruckWiseBooking_SelectByID");
+                    sqlDatabase.AddInParameter(dbCommand, "@BookingID", SqlDbType.Int, BookingID);
 
+                    using (IDataReader dr = sqlDatabase.ExecuteReader(dbCommand))
+                    {
+                        dr.Read();
+                        
+                            bookingModel.BookingID = Convert.ToInt32(dr["BookingID"].ToString()!);
+                            bookingModel.UserID = Convert.ToInt32(dr["UserID"].ToString());
+                            bookingModel.TruckID = Convert.ToInt32(dr["TruckID"].ToString());
+                            bookingModel.PickUpCityID = Convert.ToInt32(dr["PickUpCityID"].ToString());
+                            bookingModel.DropCityID = Convert.ToInt32(dr["DropCityID"].ToString());
+                            bookingModel.GoodsTypeID = Convert.ToInt32(dr["GoodsTypeID"].ToString());
+                            bookingModel.DriverID = Convert.ToInt32(dr["DriverID"].ToString());
+                            bookingModel.Distance = Convert.ToDouble(dr["Distance"].ToString());
+                            bookingModel.Price = Convert.ToDouble(dr["Price"].ToString());
+                            bookingModel.Weight = Convert.ToDouble(dr["Weight"].ToString());
+                            bookingModel.PickUpDate = Convert.ToDateTime(dr["PickUpDate"].ToString());
+                            bookingModel.DropDate = Convert.ToDateTime(dr["DropDate"].ToString());
+                            bookingModel.FromAddress = dr["FromAddress"].ToString();
+                            bookingModel.ToAddress = dr["ToAddress"].ToString();
+                            bookingModel.Created = Convert.ToDateTime(dr["Created"].ToString());
+                            bookingModel.Modified = Convert.ToDateTime(dr["Modified"].ToString());
+                            
+                        
+                    }
+                }
                 City_DALBase city_DALBase = new City_DALBase();
                 Driver_DALBase driver_DALBase = new Driver_DALBase();
                 GoodsType_DALBase goodsType_DALBase = new GoodsType_DALBase();
@@ -118,6 +146,22 @@ namespace TruckTransportManegment.DAL
                 sqlDatabase.AddInParameter(dbCommand, "@ToAddress", SqlDbType.NVarChar, bookingModel.ToAddress);
 
 
+                return Convert.ToBoolean(sqlDatabase.ExecuteNonQuery(dbCommand));
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Order_Delete(int BookingID)
+        {
+            try
+            {
+                SqlDatabase sqlDatabase = new SqlDatabase(DAL_Helpers.ConnString);
+                DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("API_TruckWiseBooking_Delete");
+                sqlDatabase.AddInParameter(dbCommand, "@BookingID", SqlDbType.NVarChar, BookingID);
                 return Convert.ToBoolean(sqlDatabase.ExecuteNonQuery(dbCommand));
 
             }

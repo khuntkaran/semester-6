@@ -7,6 +7,7 @@ namespace TruckTransportManegment.Areas.MainPages.Models
     {
         public int?      BookingID { get; set; }
         public int      UserID { get; set; }
+        public string UserName { get; set; }
         [Required]
         public int      TruckID     { get; set; }
         public string   TruckName { get; set; }

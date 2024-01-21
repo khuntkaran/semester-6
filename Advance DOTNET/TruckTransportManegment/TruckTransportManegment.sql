@@ -325,8 +325,10 @@
 			alter PROCEDURE dbo.API_TruckWiseBooking_SelectAll
 			AS
 			BEGIN
-				SELECT BookingID,UserID, TruckWiseBooking.TruckID,TruckName, PickUpCityID, MC.CityName as PickUpCityName, DropCityID ,MST_City.CityName as DropCityName, TruckWiseBooking.GoodsTypeID, GoodsTypeName ,TruckWiseBooking.DriverID, DriverName, Distance, TruckWiseBooking.Price, Weight, PickUpDate, DropDate, FromAddress, ToAddress,TruckWiseBooking.Created,TruckWiseBooking.Modified 
+				SELECT BookingID,TruckWiseBooking.UserID,UserName, TruckWiseBooking.TruckID,TruckName, PickUpCityID, MC.CityName as PickUpCityName, DropCityID ,MST_City.CityName as DropCityName, TruckWiseBooking.GoodsTypeID, GoodsTypeName ,TruckWiseBooking.DriverID, DriverName, Distance, TruckWiseBooking.Price, Weight, PickUpDate, DropDate, FromAddress, ToAddress,TruckWiseBooking.Created,TruckWiseBooking.Modified 
 				FROM TruckWiseBooking 
+				left outer join MST_User
+				on MST_User.UserID= TruckWiseBooking.UserID
 				left outer join MST_Truck
 				on MST_Truck.TruckID= TruckWiseBooking.TruckID
 				left outer join MST_City
@@ -337,6 +339,29 @@
 				on MST_Driver.DriverID= TruckWiseBooking.DriverID
 				left outer join MST_GoodsType
 				on MST_GoodsType.GoodsTypeID= TruckWiseBooking.GoodsTypeID
+				
+			END;
+
+		--select all by userid
+			alter PROCEDURE dbo.API_TruckWiseBooking_SelectAll_By_UserID
+				@UserID int
+			AS
+			BEGIN
+				SELECT BookingID,TruckWiseBooking.UserID,UserName, TruckWiseBooking.TruckID,TruckName, PickUpCityID, MC.CityName as PickUpCityName, DropCityID ,MST_City.CityName as DropCityName, TruckWiseBooking.GoodsTypeID, GoodsTypeName ,TruckWiseBooking.DriverID, DriverName, Distance, TruckWiseBooking.Price, Weight, PickUpDate, DropDate, FromAddress, ToAddress,TruckWiseBooking.Created,TruckWiseBooking.Modified 
+				FROM TruckWiseBooking
+				left outer join MST_User
+				on MST_User.UserID= TruckWiseBooking.UserID
+				left outer join MST_Truck
+				on MST_Truck.TruckID= TruckWiseBooking.TruckID
+				left outer join MST_City
+				on MST_City.CityID= TruckWiseBooking.DropCityID
+				left outer join MST_City as MC
+				on MC.CityID= TruckWiseBooking.PickUpCityID
+				left outer join MST_Driver
+				on MST_Driver.DriverID= TruckWiseBooking.DriverID
+				left outer join MST_GoodsType
+				on MST_GoodsType.GoodsTypeID= TruckWiseBooking.GoodsTypeID
+				where TruckWiseBooking.UserID = @UserID
 				
 			END;
 

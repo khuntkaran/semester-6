@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TruckTransportManegment.Areas.MainPages.Models;
 using TruckTransportManegment.DAL;
+using TruckTransportManegment.DAL.CheckAccess;
 
 namespace TruckTransportManegment.Areas.MainPages.Controllers
 {
-    [CheckAccess]
+    [LoginAccess]
     [Area("MainPages")]
     public class GoodsTypeController : Controller
     {
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult GoodsType()
         {
             ViewBag.Title = "GoodsType";
@@ -16,7 +17,7 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
             GoodsType_DALBase goodsType_DALBase = new GoodsType_DALBase();
             return View(goodsType_DALBase.GoodsType_SelectAll());
         }
-        [CheckAccess1]
+        [AdminAccess]
         public IActionResult GoodsTypeAddEdit(int? GoodsTypeID)
         {
             ViewBagData();
