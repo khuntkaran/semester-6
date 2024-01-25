@@ -1,6 +1,6 @@
 ﻿
 .section {
-    padding: 100px 0;
+    padding: 10px 0;
     position: relative;
 }
 
@@ -12,6 +12,7 @@
 ---------------------*/
 .contact-name {
     margin-bottom: 30px;
+
 }
 
     .contact-name h5 {

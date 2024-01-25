@@ -28,7 +28,6 @@
             <div class="signin-content">
                 <div class="signin-image">
                     <figure><img src="~/images/signin-image.jpg" alt="sing up image"></figure>
-                    <a asp-area="Login" asp-controller="Validation" asp-action="Registration" class="signup-image-link">Create an account</a>
                 </div>
 
                 <div class="signin-form">
@@ -52,8 +51,9 @@
                             <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                         </div>
                     </form>
-                    
-                    
+
+                    <a asp-area="Login" asp-controller="Validation" asp-action="Registration" class="signup-image-link">Create an account</a>
+
                     <div class="social-login">
                         <span class="social-label">Or login with</span>
                         <ul class="socials">
