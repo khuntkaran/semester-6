@@ -413,3 +413,23 @@
 
 
 	end
+
+
+--Statestic
+	Begin
+		alter Procedure PR_Statestics_All
+		as
+		Declare @Temp table
+		(
+			TruckCount int,
+			OrderCount int,
+			DriverCount int
+		)
+
+		insert into @Temp (
+		select TruckCount=count(*) from MST_Truck,
+		select  OrderCount=count(*) from TruckWiseBooking,
+		select  DriverCount=count(*) from MST_Driver)
+
+		select * from @Temp
+	End
