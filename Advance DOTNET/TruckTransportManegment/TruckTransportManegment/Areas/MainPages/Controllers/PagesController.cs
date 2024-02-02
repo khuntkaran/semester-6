@@ -13,7 +13,8 @@ namespace TruckTransportManegment.Areas.MainPages.Controllers
         {
             ViewBag.Title = "Home";
             ViewBagData();
-            return View();
+            Statestics_DALBase statestics_DALBase = new Statestics_DALBase();
+            return View(statestics_DALBase.Statestics_SelectAll());
         }
         public IActionResult About()
         {

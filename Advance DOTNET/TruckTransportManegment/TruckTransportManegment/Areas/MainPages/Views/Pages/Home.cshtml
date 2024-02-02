@@ -5,6 +5,7 @@
 @{
     Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
 }
+@model TruckTransportManegment.Areas.MainPages.Models.StatesticsModel;
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
@@ -66,20 +67,25 @@
                     <div class="col-sm-6">
                         <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
                             <i class="fa fa-users fa-2x text-white mb-3"></i>
-                            <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                            <h2 class="text-white mb-2" data-toggle="counter-up">@Model.UserCount</h2>
                             <p class="text-white mb-0">Happy Clients</p>
                         </div>
                         <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
                             <i class="fa fa-ship fa-2x text-white mb-3"></i>
-                            <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                            <h2 class="text-white mb-2" data-toggle="counter-up">@Model.OrderCount</h2>
                             <p class="text-white mb-0">Complete Shipments</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
-                            <i class="fa fa-star fa-2x text-white mb-3"></i>
-                            <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                            <p class="text-white mb-0">Customer Reviews</p>
+                    <div class="col-sm-6 mt-4">
+                        <div class="bg-success p-4 mb-4 mt-4  wow fadeIn" data-wow-delay="0.7s">
+                            <i class="fa fa-truck fa-2x text-white mb-3"></i>
+                            <h2 class="text-white mb-2" data-toggle="counter-up">@Model.TruckCount</h2>
+                            <p class="text-white mb-0">Trucks</p>
+                        </div>
+                        <div class="bg-warning p-4 wow fadeIn" data-wow-delay="0.7s">
+                            <i class="fa fa-user fa-2x text-white mb-3"></i>
+                            <h2 class="text-white mb-2" data-toggle="counter-up">@Model.DriverCount</h2>
+                            <p class="text-white mb-0">Drivers</p>
                         </div>
                     </div>
                 </div>

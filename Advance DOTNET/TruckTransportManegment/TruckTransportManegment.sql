@@ -419,17 +419,15 @@
 	Begin
 		alter Procedure PR_Statestics_All
 		as
-		Declare @Temp table
-		(
-			TruckCount int,
-			OrderCount int,
-			DriverCount int
-		)
+		Declare @TruckCount int
+		Declare @OrderCount int
+		Declare @DriverCount int
+		Declare @UserCount int
 
-		insert into @Temp (
-		select TruckCount=count(*) from MST_Truck,
-		select  OrderCount=count(*) from TruckWiseBooking,
-		select  DriverCount=count(*) from MST_Driver)
+		select @TruckCount=count(*) from MST_Truck
+		select  @OrderCount=count(*) from TruckWiseBooking
+		select  @DriverCount=count(*) from MST_Driver
+		select @UserCount=count(*) from MST_User where IsAdmin=0
 
-		select * from @Temp
+		select @TruckCount as TruckCount,@OrderCount as OrderCount,@DriverCount as DriverCount,@UserCount as UserCount
 	End
