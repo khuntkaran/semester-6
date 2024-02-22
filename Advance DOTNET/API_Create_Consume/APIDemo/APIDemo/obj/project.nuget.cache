@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZKXUXdglIS1P8lPg9K2oKFhklYh8iQTcqcLDPaSFZKrf5T+cyJ6lhyelU5rIcSCtQcEZI2A2LfovA5gx9lD9DA==",
+  "dgSpecHash": "8PyAm7OfMr+VFhbKK1w/pYiIhy+NnUIKT6QvluY43Fh/z3b9KL8YsO8jLFdL4myd6CTgF7kNJ2xeo+pXL7Ciew==",
   "success": true,
   "projectFilePath": "E:\\semester-6\\Advance DOTNET\\API_Create_Consume\\APIDemo\\APIDemo\\APIDemo.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,11 @@
     "C:\\Users\\Apex\\.nuget\\packages\\enterpriselibrary.common.netcore\\6.3.0\\enterpriselibrary.common.netcore.6.3.0.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\enterpriselibrary.data\\6.0.1304\\enterpriselibrary.data.6.0.1304.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\enterpriselibrary.data.netcore\\6.3.2\\enterpriselibrary.data.netcore.6.3.2.nupkg.sha512",
+    "C:\\Users\\Apex\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Apex\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Apex\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Apex\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Apex\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

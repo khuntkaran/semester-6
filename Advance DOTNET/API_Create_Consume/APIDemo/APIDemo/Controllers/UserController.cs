@@ -79,8 +79,9 @@ namespace APIDemo.Controllers
         public IActionResult APIUserInsert([FromForm]UserModel userModel)
         {
             User_BALBase user_BALBase = new User_BALBase();
-            bool result = user_BALBase.API_User_Insert(userModel);
             Dictionary<String, dynamic> response = new Dictionary<string, dynamic>();
+
+            bool result = user_BALBase.API_User_Insert(userModel);
             if (result)
             {
                 response.Add("Status", true);
@@ -113,6 +114,16 @@ namespace APIDemo.Controllers
                 response.Add("Message", "Error");
                 return Ok(response);
             }
+        }
+
+        [HttpPost]
+        public IActionResult ProductPost([FromForm] UserModel userModel)
+        {
+            if (ModelState.IsValid)
+            {
+                return Ok("Data validated successfully!");
+            }
+            return NotFound("Data not validate!");
         }
     }
 
