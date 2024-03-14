@@ -16,11 +16,18 @@
     <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="GoodsType" asp-action="GoodsTypeAddEdit">Add GoodsType</a>
 
 
-    <div class="container">
+    <div class="row contact-form ">
+        <div class="col-md-4">
+            <input class="form-control" type="text" id="Goodstypename" placeholder="Filter by GoodsType Name" oninput="filterGoodstype()" />
+        </div>
+    </div>
+
+
+    <div class="container mt-3">
         <div class="row">
             @foreach (var goodsType in Model)
             {
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 Goodstype-items" data-name="@goodsType.GoodsTypeName">
                     <div class="card radius-10 m-b-30 border-danger">
                         <div class="card-body row">
                             <div class="col-10 card-title align-self-center mb-0">
@@ -53,3 +60,19 @@
         </div>
     </div>
 </div>
+
+
+<script>
+
+    function filterGoodstype(){
+        var inputName = document.getElementById('Goodstypename').value.toUpperCase();
+        var Goodstypes = document.getElementsByClassName('Goodstype-items');
+
+        for (var i = 0; i < Goodstypes.length; i++) {
+            var GoodstypesName = Goodstypes[i].getAttribute('data-name').toUpperCase();
+            var display = (GoodstypesName.indexOf(inputName) > -1) ? 'block' : 'none';
+            Goodstypes[i].style.display = display;
+        }
+
+    }
+</script>

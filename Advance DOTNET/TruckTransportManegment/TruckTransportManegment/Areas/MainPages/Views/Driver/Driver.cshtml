@@ -1,9 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@{
+﻿@{
     Layout = "~/Areas/MainPages/Views/Pages/Main.cshtml";
 }
 @model List<TruckTransportManegment.Areas.MainPages.Models.DriverModel>;
@@ -12,14 +7,24 @@
 <!-- Main css -->
 <link rel="stylesheet" href="~/css/Cardcss.css">
 
+
 <div class="container mt-5">
     <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="Driver" asp-action="DriverAddEdit">Add Driver</a>
+    <div class="row contact-form ">
+        <div class="col-md-4"><input class="form-control" type="text" id="drivername" placeholder="Filter by driver Name" oninput="filterDrivers()" /></div>
+        <div class="col-md-4"><input class="form-control" type="text" id="driverphone" placeholder="Filter by driver phone" oninput="filterDrivers()" /></div>
+        <div class="col-md-4"><input class="form-control" type="text" id="licenceno" placeholder="Filter by licence no" oninput="filterDrivers()" /></div>
+        <div class="col-md-4 text-center mt-2">
+            <label>Filter By ExpiryDate </label>
+        </div>
+        <div class="col-md-4"><input class="form-control" type="date" id="expdate" placeholder="Select an Exp. date" oninput="filterDrivers()" /></div>
 
-    <div class="container">
+    </div>
+    <div class="container mt-3">
         <div class="row">
             @foreach (var driver in Model)
             {
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 driver-item" data-name="@driver.DriverName" data-phone="@driver.DriverPhone" data-licenceNo="@driver.LicenceNo" data-expiry="@driver.LicenceExpiryDate">
                     <div class="card radius-10 m-b-30 border-danger">
                         <div class="card-body row">
                             <div class="col-10 card-title align-self-center mb-0">
@@ -55,3 +60,42 @@
         </div>
     </div>
 </div>
+
+<script>
+    function filterDrivers() {
+        var inputName = document.getElementById('drivername').value.toUpperCase();
+        var inputPhone = document.getElementById('driverphone').value.toUpperCase();
+        var inputLicenceNo = document.getElementById('licenceno').value.toUpperCase();
+        var inputExpDate = document.getElementById('expdate').value;
+
+        var drivers = document.getElementsByClassName('driver-item');
+
+        for (var i = 0; i < drivers.length; i++) {
+            var driverName = drivers[i].getAttribute('data-name').toUpperCase();
+            var driverPhone = drivers[i].getAttribute('data-phone').toUpperCase();
+            var driverLicenceNo = drivers[i].getAttribute('data-licenceNo').toUpperCase();
+            var driverExpDate = drivers[i].getAttribute('data-expiry');
+
+            var display = (driverName.indexOf(inputName) > -1 && driverPhone.indexOf(inputPhone) > -1 && driverLicenceNo.indexOf(inputLicenceNo) > -1 && compareDates(driverExpDate, inputExpDate)) ? 'block' : 'none';
+            drivers[i].style.display = display;
+        }
+    }
+
+    function compareDates(driverExpDate, inputExpDate) {
+        if (!inputExpDate) return true; // If no input expiry date, return true (no filtering)
+        
+        //var driverExpDate = '10/02/2024'; // Example date string
+        var parts = driverExpDate.split('/');
+        var isoDateString = parts[1] + '-' + parts[0] + '-' + parts[2]; // Convert to YYYY-MM-DD format
+        
+        var driverExpDateObj = new Date(isoDateString);
+        var inputExpDateObj = new Date(inputExpDate);
+      
+
+        return isSameDate =
+            driverExpDateObj.getFullYear()  === inputExpDateObj.getFullYear() &&
+            driverExpDateObj.getMonth()     === inputExpDateObj.getMonth() &&
+            driverExpDateObj.getDate()      === inputExpDateObj.getDate();
+       
+    }
+</script>

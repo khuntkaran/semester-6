@@ -9,11 +9,38 @@
 <div class="container mt-5">
     <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="Truck" asp-action="TruckAddEdit">Add Truck</a>
 
-    <div class="container">
+
+     <div class="row contact-form">
+        <div class="col-md-4">
+            <input class="form-control" type="text" id="truckname" placeholder="Filter by Truck Name" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-4">
+            <input class="form-control" type="text" id="trucknumber" placeholder="Filter by Truck Number" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="text" id="trucktype" placeholder="Filter by Truck Type" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="number" id="price" placeholder="Filter by Price" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="number" id="capacity" placeholder="Filter by Capacity" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="text" id="engineno" placeholder="Filter by Engine Number" oninput="filterTrucks()" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="text" id="chassisno" placeholder="Filter by Chassis Number" oninput="filterTrucks()" />
+        </div>
+        <!-- Add more input fields for additional filtering -->
+    </div>
+
+
+    <div class="container mt-3">
         <div class="row">
             @foreach (var truck in Model)
             {
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 truck-item" data-name="@truck.TruckName" data-number="@truck.TruckNumber" data-engine="@truck.EngineNo" data-chassis="@truck.ChasisNo" data-capacity="@truck.Capacity" data-price="@truck.Price" data-type="@truck.TruckType">
                     <div class="card radius-10 m-b-30 border-danger">
                         <div class="card-body row">
                             <div class="col-10 card-title align-self-center mb-0">
@@ -49,3 +76,30 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    function filterTrucks() {
+        var inputName = document.getElementById('truckname').value.toUpperCase();
+        var inputNumber = document.getElementById('trucknumber').value.toUpperCase();
+        var inputType = document.getElementById('trucktype').value.toUpperCase();
+        var inputCapacity = document.getElementById('capacity').value.toUpperCase();
+        var inputEngine = document.getElementById('engineno').value.toUpperCase();
+        var inputChassis = document.getElementById('chassisno').value.toUpperCase();
+        var inputPrice = document.getElementById('price').value.toUpperCase();
+
+        var trucks = document.getElementsByClassName('truck-item');
+
+        for (var i = 0; i < trucks.length; i++) {
+            var truckName = trucks[i].getAttribute('data-name').toUpperCase();
+            var truckNumber = trucks[i].getAttribute('data-number').toUpperCase();
+            var truckType = trucks[i].getAttribute('data-type').toUpperCase();
+            var truckPrice = trucks[i].getAttribute('data-price');
+            var truckCapacity = trucks[i].getAttribute('data-capacity');
+            var truckEngine = trucks[i].getAttribute('data-engine').toUpperCase();
+            var truckChassis = trucks[i].getAttribute('data-chassis').toUpperCase();
+            var display = (truckName.indexOf(inputName) > -1 && truckNumber.indexOf(inputNumber) > -1 && truckType.indexOf(inputType) > -1 && truckPrice.indexOf(inputPrice) > -1 && truckCapacity.indexOf(inputCapacity) > -1 && truckEngine.indexOf(inputEngine) > -1 && truckChassis.indexOf(inputChassis) > -1) ? 'block' : 'none';
+            trucks[i].style.display = display;
+        }
+    }
+</script>

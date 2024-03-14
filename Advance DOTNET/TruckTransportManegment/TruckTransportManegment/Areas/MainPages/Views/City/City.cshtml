@@ -16,13 +16,23 @@
 <div class="container mt-5">
     <a class="btn btn-outline-primary mb-3" asp-area="MainPages" asp-controller="City" asp-action="CityAddEdit">Add City</a>
 
-
    
-    <div class="container">
-        <div class="row">
+        <div class="row contact-form ">
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="cityname" placeholder="Filter by City Name" oninput="filterCities()" />
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="citycode" placeholder="Filter by City Code" oninput="filterCities()"
+            </div>
+        </div>
+
+    
+
+    <div class="container mt-3">
+        <div class="row" id="cityContainer">
             @foreach (var city in Model)
             {
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-4 city-item" data-name="@city.CityName" data-code="@city.CityCode">
                     <div class="card radius-10 m-b-30 border-danger">
                         <div class="card-body row">
                             <div class="col-10 card-title align-self-center mb-0">
@@ -56,3 +66,19 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    function filterCities() {
+        var inputName = document.getElementById('cityname').value.toUpperCase();
+        var inputCode = document.getElementById('citycode').value.toUpperCase();
+        var cities = document.getElementsByClassName('city-item');
+
+        for (var i = 0; i < cities.length; i++) {
+            var cityName = cities[i].getAttribute('data-name').toUpperCase();
+            var cityCode = cities[i].getAttribute('data-code').toUpperCase();
+            var display = (cityName.indexOf(inputName) > -1 && cityCode.indexOf(inputCode) > -1) ? 'block' : 'none';
+            cities[i].style.display = display;
+        }
+    }
+</script>

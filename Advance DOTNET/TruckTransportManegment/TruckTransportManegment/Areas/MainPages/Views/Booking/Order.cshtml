@@ -16,13 +16,74 @@
 
 <div class="container mt-5">
 
-
-
     <div class="container">
+        <div class="row  contact-form">
+            <div class="col-md-4">
+                <input class="form-control" type="number" id="filterBookingID" oninput="filterOrder()" placeholder="Filter by OrderID">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterPickUpCityName" oninput="filterOrder()" placeholder="Filter by PickUpCityName">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterDropCityName" oninput="filterOrder()" placeholder="Filter by DropCityName">
+            </div>
+           
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterTruckName" oninput="filterOrder()" placeholder="Filter by TruckName">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterGoodsTypeName" oninput="filterOrder()" placeholder="Filter by GoodsTypeName">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterDriverName" oninput="filterOrder()" placeholder="Filter by DriverName">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="number" id="filterDistance" oninput="filterOrder()" placeholder="Filter by Distance">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="number" id="filterPrice" oninput="filterOrder()" placeholder="Filter by Price">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="number" id="filterWeight" oninput="filterOrder()" placeholder="Filter by Weight">
+            </div>
+            
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterFromAddress" oninput="filterOrder()" placeholder="Filter by FromAddress">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="filterToAddress" oninput="filterOrder()" placeholder="Filter by ToAddress">
+            </div>
+
+            <div class="col-md-4 @(ViewBag.IsAdmin == "False" ? "d-none" : "")">
+                <input class="form-control" type="number" id="filterUserID" oninput="filterOrder()" placeholder="Filter by UserID">
+            </div>
+            <div class="col-md-4 @(ViewBag.IsAdmin == "False" ? "d-none" : "")">
+                <input class="form-control" type="text" id="filterUserName" oninput="filterOrder()" placeholder="Filter by UserName">
+            </div>
+            
+        </div>
+        <div class="row contact-form mt-2">
+            <div class="col-md-3 text-center">
+                <label>Filter By PickUp Date</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="date" id="filterPickUpDate" oninput="filterOrder()" placeholder="Filter by PickUpDate">
+            </div>
+            <div class="col-md-3 text-center">
+                <label>Filter By Drop Date</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="date" id="filterDropDate" oninput="filterOrder()" placeholder="Filter by DropDate">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
         <div class="row">
             @foreach (var order in Model)
             {
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-4  order-item col-xl-4" data-bookingid="@order.BookingID" data-pickupcityname="@order.PickUpCityName" data-dropcityname="@order.DropCityName" data-userid="@order.UserID" data-username="@order.UserName" data-truckname="@order.TruckName" data-goodstypename="@order.GoodsTypeName" data-drivername="@order.DriverName" data-distance="@order.Distance" data-price="@order.Price" data-weight="@order.Weight" data-fromaddress="@order.FromAddress" data-toaddress="@order.ToAddress" data-pickupdate="@order.PickUpDate" data-dropdate="@order.DropDate">
                     <div class="card radius-10 m-b-30 border-danger">
                         <div class="card-body row">
                             <div class="col-10 card-title align-self-center mb-0">
@@ -69,3 +130,84 @@
     </div>
 </div>
 
+<script>
+    function filterOrder() {
+        var inputBookingID = document.getElementById('filterBookingID').value;
+        var inputPickUpCityName = document.getElementById('filterPickUpCityName').value.toUpperCase();
+        var inputDropCityName = document.getElementById('filterDropCityName').value.toUpperCase();
+        var inputUserID = document.getElementById('filterUserID').value;
+        var inputUserName = document.getElementById('filterUserName').value.toUpperCase();
+        var inputTruckName = document.getElementById('filterTruckName').value.toUpperCase();
+
+        var inputGoodsTypeName = document.getElementById('filterGoodsTypeName').value.toUpperCase();
+        var inputDriverName = document.getElementById('filterDriverName').value.toUpperCase();
+        var inputDistance = document.getElementById('filterDistance').value;
+        var inputPrice = document.getElementById('filterPrice').value;
+        var inputWeight = document.getElementById('filterWeight').value;
+
+        var inputPickUpDate = document.getElementById('filterPickUpDate').value.toUpperCase();
+        var inputDropDate = document.getElementById('filterDropDate').value.toUpperCase();
+        var inputFromAddress = document.getElementById('filterFromAddress').value.toUpperCase();
+        var inputToAddress = document.getElementById('filterToAddress').value.toUpperCase();
+
+        var orders = document.getElementsByClassName('order-item');
+
+        for (var i = 0; i < orders.length; i++) {
+            var bookingID = orders[i].getAttribute('data-bookingid');
+            var pickUpCityName = orders[i].getAttribute('data-pickupcityname').toUpperCase();
+            var dropCityName = orders[i].getAttribute('data-dropcityname').toUpperCase();
+            var userID = orders[i].getAttribute('data-userid');
+            var userName = orders[i].getAttribute('data-username').toUpperCase();
+            var truckName = orders[i].getAttribute('data-truckname').toUpperCase();
+
+            var goodsTypeName = orders[i].getAttribute('data-goodstypename').toUpperCase();
+            var driverName = orders[i].getAttribute('data-drivername').toUpperCase();
+            var distance = orders[i].getAttribute('data-distance');
+            var price = orders[i].getAttribute('data-price');
+            var weight = orders[i].getAttribute('data-weight');
+
+            var pickUpDate = orders[i].getAttribute('data-pickupdate').toUpperCase();
+            var dropDate = orders[i].getAttribute('data-dropdate').toUpperCase();
+            var fromAddress = orders[i].getAttribute('data-fromaddress').toUpperCase();
+            var toAddress = orders[i].getAttribute('data-toaddress').toUpperCase();
+
+            var display = (bookingID.indexOf(inputBookingID) > -1 &&
+                pickUpCityName.indexOf(inputPickUpCityName) > -1 &&
+                dropCityName.indexOf(inputDropCityName) > -1 &&
+                userID.indexOf(inputUserID) > -1 &&
+                userName.indexOf(inputUserName) > -1 &&
+                truckName.indexOf(inputTruckName) > -1 &&
+                goodsTypeName.indexOf(inputGoodsTypeName) > -1 &&
+                driverName.indexOf(inputDriverName) > -1 &&
+                distance.indexOf(inputDistance) > -1 &&
+                price.indexOf(inputPrice) > -1 &&
+                weight.indexOf(inputWeight) > -1  &&
+                fromAddress.indexOf(inputFromAddress) > -1 &&
+                toAddress.indexOf(inputToAddress) > -1 &&
+                compareDates(pickUpDate, inputPickUpDate)  &&
+                compareDates(dropDate, inputDropDate)
+                ) ? 'block' : 'none';
+
+            orders[i].style.display = display; 
+        }
+    }
+
+
+    function compareDates(driverExpDate, inputExpDate) {
+        if (!inputExpDate) return true; // If no input expiry date, return true (no filtering)
+
+        //var driverExpDate = '10/02/2024'; // Example date string
+        var parts = driverExpDate.split('/');
+        var isoDateString = parts[1] + '-' + parts[0] + '-' + parts[2]; // Convert to YYYY-MM-DD format
+
+        var driverExpDateObj = new Date(isoDateString);
+        var inputExpDateObj = new Date(inputExpDate);
+
+
+        return isSameDate =
+            driverExpDateObj.getFullYear() === inputExpDateObj.getFullYear() &&
+            driverExpDateObj.getMonth() === inputExpDateObj.getMonth() &&
+            driverExpDateObj.getDate() === inputExpDateObj.getDate();
+
+    }
+</script>
