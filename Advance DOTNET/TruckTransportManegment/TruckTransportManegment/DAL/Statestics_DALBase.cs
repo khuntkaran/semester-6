@@ -25,6 +25,23 @@ namespace TruckTransportManegment.DAL
 
                     }
                 }
+                DbCommand dbCommand2 = sqlDatabase.GetStoredProcCommand("PR_Statestics_Timeline");
+                List<StatesticsTimeline> statesticsTimelines = new List<StatesticsTimeline>();
+                using (IDataReader dr = sqlDatabase.ExecuteReader(dbCommand2))
+                {
+                    
+                    while (dr.Read())
+                    {
+                        StatesticsTimeline statesticsTimeline = new StatesticsTimeline();
+                        statesticsTimeline.PickUpCityName = dr["PickUpCityName"].ToString();
+                        statesticsTimeline.DropCityName = dr["DropCityName"].ToString();
+                        statesticsTimeline.TotalOrder = Convert.ToInt32(dr["TotalOrder"].ToString());
+                        statesticsTimelines.Add(statesticsTimeline);
+                        
+                    }
+
+                    statesticsModel.Timeline = statesticsTimelines;
+                }
                 return statesticsModel;
             }
             catch (Exception ex)

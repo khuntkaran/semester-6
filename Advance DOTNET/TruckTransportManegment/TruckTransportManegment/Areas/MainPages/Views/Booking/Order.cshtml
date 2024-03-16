@@ -1,6 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
+   
 @{
 }
 @{
@@ -78,8 +77,25 @@
         </div>
     </div>
 
+    <div class="container mt-5">
 
-    <div class="container mt-4">
+        
+        <ul id="pagination" class="pagination">
+            <!-- Pagination links will be added here -->
+        </ul>
+
+        <div class="container mt-4">
+            <div class="row" id="dataContainer">
+                <!-- Data items will be displayed here -->
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div>
+    @*<div class="container mt-4">
         <div class="row">
             @foreach (var order in Model)
             {
@@ -128,10 +144,18 @@
             }
         </div>
     </div>
+*@
 </div>
+
+</div>
+
+
+
+
 
 <script>
     function filterOrder() {
+        console.log("hello")
         var inputBookingID = document.getElementById('filterBookingID').value;
         var inputPickUpCityName = document.getElementById('filterPickUpCityName').value.toUpperCase();
         var inputDropCityName = document.getElementById('filterDropCityName').value.toUpperCase();
@@ -190,6 +214,8 @@
 
             orders[i].style.display = display; 
         }
+
+        
     }
 
 
@@ -211,3 +237,144 @@
 
     }
 </script>
+
+<script>
+    // Sample data (replace this with your actual data)
+    var orders = @Html.Raw(Json.Serialize(Model)); // Convert model to JavaScript array
+    
+    // Variables to track pagination state
+    var currentPage = 1;
+    var pageSize = 6; // Adjust the page size as needed
+    var totalPages = Math.ceil(orders.length / pageSize);
+
+    // Function to display data based on current page
+    function displayData() {
+        var startIndex = (currentPage - 1) * pageSize;
+        var endIndex = Math.min(startIndex + pageSize, orders.length);
+        var container = document.getElementById('dataContainer');
+        container.innerHTML = ''; // Clear previous data
+
+            for (var i = startIndex; i < endIndex; i++) {
+                var order = orders[i];
+                var orderItem = `
+                <div class="col-md-4  order-item col-xl-4" data-bookingid="${order.bookingID}" data-pickupcityname="${order.pickUpCityName}" data-dropcityname="${order.dropCityName}" data-userid="${order.userID}" data-username="${order.userName}" data-truckname="${order.truckName}" data-goodstypename="${order.goodsTypeName}" data-drivername="${order.driverName}" data-distance="${order.distance}" data-price="${order.price}" data-weight="${order.weight}" data-fromaddress="${order.fromAddress}" data-toaddress="${order.toAddress}" data-pickupdate="${order.pickUpDate}" data-dropdate="${order.dropDate}">
+                    <div class="card radius-10 m-b-30 border-danger">
+                        <div class="card-body row">
+                            <div class="col-10 card-title align-self-center mb-0">
+                                     <h6><span class="badge ${new Date(order.dropDate) < new Date() ? 'bg-success' : 'bg-warning'} " > ${new Date(order.dropDate) < new Date() ? 'Complited' : 'Pending' }  </span></h6 >
+                                          
+                                <h5>${order.bookingID} : ${order.pickUpCityName} To ${order.dropCityName}</h5>
+                                <p class="m-0 @(ViewBag.IsAdmin == "False" ? "d-none" : "")">${order.userID} ${order.userName}</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-end @(ViewBag.IsAdmin == "True" ? "d-none" : "")">
+                                <div class=" btn-group btn-group-sm">
+                                    <form method="post"  action="/MainPages/Booking/Booking?BookingID=${order.bookingID}" asp-area="MainPages" asp-controller="Booking" asp-action="Booking" asp-route-BookingID="${order.bookingID}" >
+                                        <button type="submit" class="btn btn-warning tooltips " data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                    </form>
+                                            <form method="post" action="/MainPages/Booking/CancleBooking?BookingID=${order.bookingID}" asp-area="MainPages" asp-controller="Booking" asp-action="CancleBooking" asp-route-BookingID="${order.bookingID}">
+                                        <button type="submit" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-truck"></i> &nbsp;Truck : ${order.truckName}</li>
+                            <li class="list-group-item"><i class="fa fa-cubes"></i> &nbsp;GoodsType : ${order.goodsTypeName}</li>
+                            <li class="list-group-item"><i class="fa fa-id-card"></i> &nbsp;Driver : ${order.driverName}</li>
+                            <li class="list-group-item"><i class="fa fa-arrows-h "></i> &nbsp;Distance : ${order.distance}</li>
+                            <li class="list-group-item"><i class="fa fa-inr"></i> &nbsp;Price : ${order.price}</li>
+                            <li class="list-group-item"><i class="fa fa-crosshairs "></i> &nbsp;Weight : ${order.weight}</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-minus-o "></i> &nbsp;PickUpDate : ${order.pickUpDate}</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-o "></i> &nbsp;DropDate : ${order.dropDate}</li>
+                            <li class="list-group-item"><i class="fa fa-map-marker"></i> &nbsp;FromAddress : ${order.fromAddress}</li>
+                            <li class="list-group-item"><i class="fa fa-location-arrow"></i> &nbsp;ToAddress : ${order.toAddress}</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-plus-o"></i> &nbsp;Created : ${order.created}</li>
+                            <li class="list-group-item"><i class="fa fa-calendar-check-o"></i> &nbsp;Modified : ${order.modified}</li>
+                        </ul>
+                    </div>
+                </div>`;
+                container.innerHTML += orderItem;
+            }
+
+    }
+
+    // Function to create pagination links
+    function createPagination() {
+        var paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = ''; // Clear previous pagination
+
+        for (var i = 1; i <= totalPages; i++) {
+            var listItem = document.createElement('li');
+            var link = document.createElement('a');
+            link.href = '#';
+            link.textContent = i;
+            listItem.appendChild(link);
+
+            if (i === currentPage) {
+                listItem.classList.add('active');
+            }
+
+            link.addEventListener('click', function () {
+                currentPage = parseInt(this.textContent);
+                displayData();
+                highlightActivePage();
+                filterOrder();
+            });
+
+            paginationContainer.appendChild(listItem);
+        }
+        
+    }
+
+    // Function to highlight active page
+    function highlightActivePage() {
+        var paginationLinks = document.querySelectorAll('.pagination li');
+        paginationLinks.forEach(function (link, index) {
+            if (index + 1 === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Initial display
+    displayData();
+    createPagination();
+
+    
+</script>
+
+<style>
+    .pagination {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+            .pagination li a {
+                text-decoration: none;
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                color: #333;
+            }
+
+            .pagination li.active a {
+                background-color: red;
+                color: #fff;
+                border-color: red;
+            }
+</style>
+
+
+

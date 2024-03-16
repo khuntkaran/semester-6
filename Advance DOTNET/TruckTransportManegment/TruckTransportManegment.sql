@@ -431,3 +431,21 @@
 
 		select @TruckCount as TruckCount,@OrderCount as OrderCount,@DriverCount as DriverCount,@UserCount as UserCount
 	End
+
+--Statestic Timeline
+	Begin
+		alter procedure PR_Statestics_Timeline
+		as
+		SELECT MST_City.CityName as PickUpCityName , MC.CityName as DropCityName, COUNT(*) AS TotalOrder
+		FROM TruckWiseBooking left outer join MST_City
+						on MST_City.CityID= TruckWiseBooking.PickUpCityID
+						left outer join MST_City as MC
+						on MC.CityID= TruckWiseBooking.DropCityID
+		GROUP BY MST_City.CityName, MC.CityName;
+	end
+
+
+
+
+
+
