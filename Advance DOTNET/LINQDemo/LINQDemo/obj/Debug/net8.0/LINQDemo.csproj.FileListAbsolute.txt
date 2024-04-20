@@ -1,0 +1,15 @@
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\bin\Debug\net8.0\LINQDemo.exe
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\bin\Debug\net8.0\LINQDemo.deps.json
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\bin\Debug\net8.0\LINQDemo.runtimeconfig.json
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\bin\Debug\net8.0\LINQDemo.dll
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\bin\Debug\net8.0\LINQDemo.pdb
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.GeneratedMSBuildEditorConfig.editorconfig
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.AssemblyInfoInputs.cache
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.AssemblyInfo.cs
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.csproj.CoreCompileInputs.cache
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.sourcelink.json
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.dll
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\refint\LINQDemo.dll
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.pdb
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\LINQDemo.genruntimeconfig.cache
+E:\semester-6\Advance DOTNET\LINQDemo\LINQDemo\obj\Debug\net8.0\ref\LINQDemo.dll
